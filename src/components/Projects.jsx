@@ -7,7 +7,7 @@ const projects = [
     image: "/images/livescribe.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/live-scribe",
-    
+    live: "https://yared81.github.io/live-scribe/"
   },
   {
     title: "FC Barcelona Store",
@@ -15,7 +15,7 @@ const projects = [
     image: "/images/fcb_store.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/barca-store-et",
-    
+    live: "https://yared81.github.io/barca-store-et/"
   },
   {
     title: "Damena-Ethiopian Weather App",
@@ -23,14 +23,15 @@ const projects = [
     image: "/images/damena.png",
     tech: ["React", "OpenWeather API", "Tailwind CSS"],
     github: "https://github.com/yared81/damena-weather-app",
-    
+     
   },
   {
     title: "Tic-Tac-To Game",
     description: "An interactive Tic-Tac-Toe game featuring a clean and responsive design, offering smooth gameplay.",
     image: "/images/tictoctoe.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/Tic-Tac-Toe",    
+    github: "https://github.com/yared81/Tic-Tac-Toe",
+    live: "https://yared81.github.io/Tic-Tac-Toe/"
   }
 ]
 
@@ -48,7 +49,6 @@ function Projects() {
                   src={project.image}
                   alt={project.title}
                   className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-                 
                 />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
@@ -60,7 +60,14 @@ function Projects() {
                 >
                   <FiGithub size={24} />
                 </a>
-                 
+                <a
+                  href={project.live}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-light hover:text-secondary transition-colors transform hover:scale-110"
+                >
+                  <FiExternalLink size={24} />
+                </a>
               </div>
             </div>
             
