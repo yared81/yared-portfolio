@@ -60,14 +60,7 @@ function Projects() {
                 >
                   <FiGithub size={24} />
                 </a>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-light hover:text-secondary transition-colors transform hover:scale-110"
-                >
-                  <FiExternalLink size={24} />
-                </a>
+                 
               </div>
             </div>
             

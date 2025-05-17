@@ -9,7 +9,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50)
       
-      // Update active section based on scroll position
+      
       const sections = ['home', 'about', 'projects', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
@@ -58,7 +58,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
             className="text-2xl font-bold text-white hover:text-secondary transition-colors"
             onClick={(e) => handleClick(e, '#home')}
           >
-            YD
+          Yared Mehari Azene             
           </a>
 
           {/* Desktop Menu */}

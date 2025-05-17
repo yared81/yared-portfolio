@@ -14,14 +14,14 @@ function Contact() {
         
         <div className="flex justify-center space-x-6 mb-12">
           <a
-            href="mailto:your.email@example.com"
+            href="mailto:yared4193@gmail.com"
             className="text-tertiary hover:text-secondary transition-colors"
             title="Email"
           >
             <FiMail size={24} />
           </a>
           <a
-            href="https://github.com/yourusername"
+            href="https://github.com/yared81"
             target="_blank"
             rel="noopener noreferrer"
             className="text-tertiary hover:text-secondary transition-colors"
@@ -30,7 +30,7 @@ function Contact() {
             <FiGithub size={24} />
           </a>
           <a
-            href="https://linkedin.com/in/yourusername"
+            href="https://linkedin.com/in/yaredazene"
             target="_blank"
             rel="noopener noreferrer"
             className="text-tertiary hover:text-secondary transition-colors"
@@ -38,15 +38,7 @@ function Contact() {
           >
             <FiLinkedin size={24} />
           </a>
-          <a
-            href="https://twitter.com/yourusername"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-tertiary hover:text-secondary transition-colors"
-            title="Twitter"
-          >
-            <FiTwitter size={24} />
-          </a>
+           
         </div>
         
         <a
