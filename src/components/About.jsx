@@ -28,18 +28,8 @@ function About() {
         <h2 className="section-title text-center">About Me</h2>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Image and Stats */}
+          {/* Left Column - Stats */}
           <div className="space-y-8">
-            {/* Profile Image */}
-            <div className="relative w-64 h-64 mx-auto">
-              <div className="absolute inset-0 bg-secondary/20 rounded-full animate-pulse"></div>
-              <img
-                src="/images/Yared_Photo.jpg"
-                alt="Yared Mehari"
-                className="relative w-full h-full object-cover rounded-full border-4 border-secondary/20"
-              />
-            </div>
-
             {/* Stats Box */}
             <div className="bg-dark p-6 rounded-lg shadow-lg">
               <div className="grid grid-cols-2 gap-4">
@@ -67,9 +57,9 @@ function About() {
           {/* Right Column - About Text and Skills */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h3 className="text-2xl font-bold text-light">Frontend Developer</h3>
+              <h3 className="text-2xl font-bold text-light">Web Developer</h3>
               <p className="text-tertiary">
-                Hello! I'm a passionate frontend developer with a keen eye for creating
+                Hello! I'm a passionate Web developer with a keen eye for creating
                 beautiful and functional web applications. My journey in web development
                 started with a curiosity about how websites work, which led me to dive
                 deep into modern web technologies.
@@ -82,9 +72,10 @@ function About() {
               </p>
               
               <p className="text-tertiary">
-                When I'm not coding, you can find me exploring new technologies,
-                contributing to open-source projects, or sharing my knowledge through
-                technical writing.
+                When I'm not coding, you can find me exploring new technologies,  
+                contributing to open-source projects, or sharing what I've learned  
+                through technical writing. I also make time to always learn new things—  
+                as I always say, a good developer is always learning and improving.
               </p>
             </div>
             

@@ -10,7 +10,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
       setIsScrolled(window.scrollY > 50)
       
       
-      const sections = ['home', 'about', 'projects', 'contact']
+      const sections = ['home', 'about', 'experience', 'projects', 'contact']
       const currentSection = sections.find(section => {
         const element = document.getElementById(section)
         if (element) {
@@ -43,6 +43,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
   const navLinks = [
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
+    { name: 'Experience', href: '#experience' },
     { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ]
