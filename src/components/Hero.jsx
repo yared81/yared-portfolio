@@ -37,12 +37,20 @@ const Hero = () => {
               </a>               
             </div>
 
-            <a
-              href="#projects"
-              className="btn btn-primary inline-block"
-            >
-              View My Work
-            </a>
+            <div className="flex space-x-4">
+              <a
+                href="#projects"
+                className="btn btn-primary inline-block"
+              >
+                View My Work
+              </a>
+              <a
+                href="#contact"
+                className="btn btn-primary inline-block"
+              >
+                Contact Me
+              </a>
+            </div>
           </div>
           
           <div className="flex justify-center">

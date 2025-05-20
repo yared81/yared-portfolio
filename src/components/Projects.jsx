@@ -32,6 +32,14 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/Tic-Tac-Toe",
     live: "https://yared81.github.io/Tic-Tac-Toe/"
+  },
+  {
+  title: "Clock",
+    description: "Includes functions of a world clock with cities, Stopwatch and Timer.",
+    image: "/images/clock.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/yared81/StopWatch",
+    live: "https://yared81.github.io/StopWatch/"
   }
 ]
 
@@ -40,7 +48,7 @@ function Projects() {
     <section id="projects" className="py-20 bg-primary">
       <h2 className="section-title text-center text-light">Featured Projects</h2>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
           <div key={index} className="project-card group bg-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
             <div className="relative overflow-hidden">
