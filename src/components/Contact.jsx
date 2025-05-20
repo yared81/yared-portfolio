@@ -1,5 +1,11 @@
 import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { useState } from 'react'
+import emailjs from '@emailjs/browser'
+
+// Initialize EmailJS
+emailjs.init({
+  publicKey: "c3IRm2KGrkXhj7w5W",
+})
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -11,10 +17,29 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    // Here you would typically handle the form submission
-    console.log('Form submitted:', formData)
-    // Reset form
-    setFormData({ name: '', email: '', phone: '', message: '' })
+    
+    // Send email using EmailJS
+    emailjs.send(
+      ' service_xhi1phl', // Replace with your EmailJS service ID
+      'template_h4jhs1o', // Replace with your EmailJS template ID
+      {
+        from_name: formData.name,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_name: 'Yared Mehari',
+      }
+    )
+    .then((result) => {
+      console.log('Email sent successfully:', result.text)
+      // Reset form after successful send
+      setFormData({ name: '', email: '', phone: '', message: '' })
+      alert('Message sent successfully!')
+    })
+    .catch((error) => {
+      console.error('Error sending email:', error.text)
+      alert('Failed to send message. Please try again.')
+    })
   }
 
   const handleChange = (e) => {
@@ -29,7 +54,7 @@ const Contact = () => {
       icon: <FiMail size={24} />,
       label: "Email",
       value: "yared4193@gmail.com",
-      link: "mailto:yared4193@gmail.com"
+      link: "mailto:yaredazene16@gmail.com"
     },
     {
       icon: <FiGithub size={24} />,
