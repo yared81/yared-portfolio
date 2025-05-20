@@ -1,16 +1,16 @@
 const Experience = () => {
   const experiences = [
     {
-      role: "Frontend Developer",
-      company: "Freelance",
-      period: "2023 - Present",
-      description: "Developing responsive web applications using React and modern web technologies."
+      role: "Web Developer",
+      company: "BiT Career Development Center",
+      period: "2024 - Present",
+      description: "Developed, improved, and maintained the website to ensure strong performance and functionality. Regularly fixed bugs and resolved technical issues as they arose. Made continuous improvements to enhance user experience and increase overall site efficiency."
     },
     {
-      role: "Web Developer",
-      company: "Self-Employed",
-      period: "2022 - 2023",
-      description: "Created and maintained multiple web projects including e-commerce and portfolio websites."
+      role: "Backend Developer",
+      company: "CodeAlpha",
+      period: "2024 - 2025",
+      description: "Designed and built scalable backend systems and APIs to support web applications. Resolved server-side issues to maintain high performance and reliability. Worked closely with frontend teams to connect user-facing features with backend logic. Implemented database solutions and followed security best practices to protect data and improve system efficiency."
     }
   ]
 

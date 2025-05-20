@@ -3,7 +3,7 @@ import { FiDownload } from 'react-icons/fi'
 function About() {
   const stats = [
     { number: "4+", label: "Years Experience" },
-    { number: "10+", label: "Projects Completed" }
+    { number: "15+", label: "Projects Completed" }
   ]
 
   const skills = [

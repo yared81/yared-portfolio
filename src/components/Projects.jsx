@@ -3,7 +3,7 @@ import { FiGithub, FiExternalLink } from 'react-icons/fi'
 const projects = [
   {
     title: "Ahadu Amharic Dictionary",
-    description: "This is a digital Amharic dictionary website that focuses primarily on providing clear Amharic-to-Amharic definitions. It also includes a translation feature that supports Amharic to English, Amharic to Ge’ez, and vice versa. In addition, the site offers a multilingual interface, allowing users to navigate and use the platform in different languages. Other features include Amharic riddles, proverbs, word games, and a smart spell checker that suggests correct spellings for misspelled Amharic words. The goal is to make learning and engaging with Amharic both useful and enjoyable.",
+    description: "it focuses on providing clear Amharic-to-Amharic definitions. It also includes translation features for Amharic to English, Amharic to Ge’ez, and vice versa. The site supports a multilingual interface, allowing users to navigate in different languages. Additional features include Amharic riddles, proverbs, word games, and a smart spell checker that suggests corrections for misspelled Amharic words. The platform is designed to make learning and interacting with the Amharic language both practical and engaging.",
     image: "/images/ahadu.png",
     tech: ["HTML", "CSS", "JavaScript","PHP","MySQL", "SQLite"],
     
