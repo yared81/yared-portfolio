@@ -20,11 +20,11 @@ const Contact = () => {
     
     // Send email using EmailJS
     emailjs.send(
-      ' service_xhi1phl', // Replace with your EmailJS service ID
+      'service_xhi1phl', // Replace with your EmailJS service ID
       'template_h4jhs1o', // Replace with your EmailJS template ID
       {
         from_name: formData.name,
-        from_email: formData.email,
+        email: formData.email,
         phone: formData.phone,
         message: formData.message,
         to_name: 'Yared Mehari',
