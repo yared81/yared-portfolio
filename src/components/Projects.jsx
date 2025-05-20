@@ -5,12 +5,12 @@ const projects = [
     title: "Ahadu Amharic Dictionary",
     description: "This is a digital Amharic dictionary website that focuses primarily on providing clear Amharic-to-Amharic definitions. It also includes a translation feature that supports Amharic to English, Amharic to Ge’ez, and vice versa. In addition, the site offers a multilingual interface, allowing users to navigate and use the platform in different languages. Other features include Amharic riddles, proverbs, word games, and a smart spell checker that suggests correct spellings for misspelled Amharic words. The goal is to make learning and engaging with Amharic both useful and enjoyable.",
     image: "/images/ahadu.png",
-    tech: ["HTML", "CSS", "JavaScript"],
+    tech: ["HTML", "CSS", "JavaScript","PHP","MySQL", "SQLite"],
     
   },
   {
     title: "LiveScribe Online Editor",
-    description: "A modern, lightweight code editor that provides real-time preview of HTML, CSS, and JavaScript code.",
+    description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It’s designed for quick testing, learning, and building small web projects with an instant visual output.",
     image: "/images/livescribe.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/live-scribe",
@@ -18,7 +18,7 @@ const projects = [
   },
   {
     title: "FC Barcelona Store",
-    description: "A simplified clone of the FC Barcelona official store website",
+    description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
     image: "/images/fcb_store.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/barca-store-et",
@@ -26,7 +26,7 @@ const projects = [
   },
   {
     title: "Damena-Ethiopian Weather App",
-    description: "A beautiful weather application featuring major Ethiopian cities.",
+    description: "Damena is a weather application that displays real-time weather information for major Ethiopian cities. It features a clean, user-friendly interface with localized details, making it easy for users to check conditions across the country. The app combines visual appeal with practical functionality.",
     image: "/images/damena.png",
     tech: ["React", "OpenWeather API", "Tailwind CSS"],
     github: "https://github.com/yared81/damena-weather-app",
@@ -34,7 +34,7 @@ const projects = [
   },
   {
     title: "Tic-Tac-To Game",
-    description: "An interactive Tic-Tac-Toe game featuring a clean and responsive design, offering smooth gameplay.",
+    description: "Tic-Tac-To Game is an interactive version of the classic Tic-Tac-Toe game. It features a clean, responsive design and smooth gameplay, making it fun and easy to play on any device.",
     image: "/images/tictoctoe.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/Tic-Tac-Toe",
@@ -42,7 +42,7 @@ const projects = [
   },
   {
   title: "Clock",
-    description: "Includes functions of a world clock with cities, Stopwatch and Timer.",
+    description: "This offers a set of essential timekeeping tools, including a world clock that shows the current time in various cities around the globe. It also features a stopwatch for precise timing and a timer for countdowns. All these functions are integrated into a clean, user-friendly interface for easy access and reliable performance.",
     image: "/images/clock.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/StopWatch",
