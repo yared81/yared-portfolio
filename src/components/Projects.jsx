@@ -36,7 +36,7 @@ const projects = [
   {
   title: "Clock",
     description: "Includes functions of a world clock with cities, Stopwatch and Timer.",
-    image: "/images/Clock.png",
+    image: "/images/clock.png",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/StopWatch",
     live: "https://yared81.github.io/StopWatch/"
