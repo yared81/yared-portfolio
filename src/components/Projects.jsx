@@ -13,9 +13,19 @@ const projects = [
     description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It’s designed for quick testing, learning, and building small web projects with an instant visual output.",
     image: "/images/livescribe.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/live-scribe",
-    live: "https://yared81.github.io/live-scribe/"
+ 
   },
+  
+  {
+    "title": "Employee Payroll Management System",
+    "description": "A comprehensive Java-based payroll management system that automates employee salary processing, attendance tracking, and payslip generation. The system features a modern JavaFX GUI interface, secure user authentication, and robust database integration. It handles complex payroll calculations including tax deductions, generates PDF payslips, and maintains detailed employee and salary records.",
+    "image": "/images/payroll.jpg",
+    "tech": ["Java", "JavaFX","MySQL","Maven"],  
+    "github": "https://github.com/yared81/Employee-Payroll-Management-System",
+    
+}
+  
+  ,
   {
     title: "FC Barcelona Store",
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
@@ -31,7 +41,22 @@ const projects = [
     tech: ["React", "OpenWeather API", "Tailwind CSS"],
     github: "https://github.com/yared81/damena-weather-app",
      
+  }, 
+  {
+    title: "BIT CDC Website",
+    description: "A full-stack career platform built for Bahir Dar University students, specifically for the Career Development Center at Bahir Dar Institute of Technology. It helps students access job opportunities, resources, and events. The site features a responsive React UI, with backend plans for authentication, job postings, and student profile management.",
+    image: "/images/bit_cdc.jpg",
+    tech: ["React", "Tailwind CSS","Node.js","Express.js",  "MongoDB", "REST API " ],    
   },
+  {
+    title: "Amazon Clone",
+    description: "Front end of amazon clone",
+    image: "/images/amazon.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+    github: "https://github.com/yared81/Amazon-clone",
+    live: "https://yared81.github.io/Amazon-clone/"
+  },
+  
   {
     title: "Tic-Tac-To Game",
     description: "Tic-Tac-To Game is an interactive version of the classic Tic-Tac-Toe game. It features a clean, responsive design and smooth gameplay, making it fun and easy to play on any device.",
