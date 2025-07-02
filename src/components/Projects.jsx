@@ -27,12 +27,20 @@ const projects = [
   
   ,
   {
+    title: "Hasset- Personal Budgeting Calculator",
+    description: "Hasset Budget App is a modern, user-friendly personal budgeting calculator. It helps you track your income, expenses, budgets, reminders, and savings goals—all in one place. The app features dynamic charts, category budgets, bill reminders, and export options, all wrapped in a clean, responsive design.",
+    image: "/images/Hasset.png",
+    tech: ["HTML", "CSS", "JavaScript", "Chart.js", "SheetJS (xlsx)", "jsPDF"],
+    github: "https://github.com/yared81/barca-store-et",
+    live: "https://yared81.github.io/barca-store-et/"
+  },
+  {
     title: "FC Barcelona Store",
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
     image: "/images/fcb_store.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/barca-store-et",
-    live: "https://yared81.github.io/barca-store-et/"
+    github: "https://github.com/yared81/Hasset-budget-app",
+    live: "https://yared81.github.io/Hasset-budget-app/"
   },
   {
     title: "Damena-Ethiopian Weather App",
