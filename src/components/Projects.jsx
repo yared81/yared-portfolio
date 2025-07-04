@@ -34,6 +34,7 @@ const projects = [
     github: "https://github.com/yared81/barca-store-et",
     live: "https://yared81.github.io/barca-store-et/"
   },
+  
   {
     title: "FC Barcelona Store",
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
