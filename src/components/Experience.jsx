@@ -11,19 +11,19 @@ const Experience = () => {
     {
       role: "Backend Engineer",
       company: "Kuraz technologies",
-      period: "2024 - 2025",
+      period: "2024 - Present",
       description: "I worked as a backend developer at Kuraz technologies. I was responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website."
     },
     {
       role: "Software Engineer",
       company: "HammerSpacecrafts",
-      period: "2024 - 2025",
+      period: "2024 - Present",
       description: "I work as a full-stack software engineer at Hammerspacecrafts, where I develop and maintain web applications across both frontend and backend. My responsibilities include building and integrating APIs, improving application performance, and collaborating with team members to design and implement new features. I also take part in code reviews, write tests to ensure reliability, and focus on delivering secure, scalable, and user-friendly software."
     },
     {
       role: "Tools & Systems Developer",
       company: "Startup Garage",
-      period: "2024 - 2025",
+      period: "2024 - Present",
       description: "I support the team by exploring, testing, and implementing digital tools that enhance workflow and operational efficiency. I help evaluate automation solutions, contribute to backend systems, and collaborate with others to improve processes for early-stage startups. This role is helping me build a strong foundation in tech infrastructure and startup operations."
     },
     {
@@ -35,7 +35,7 @@ const Experience = () => {
     {
       role: "Full Stack Developer",
       company: "Freelance / Self-employed",
-      period: "2023 - 2025",
+      period: "2023 - Present",
       description: "I work with clients to design, build, and maintain complete web applications from frontend to backend. My responsibilities include developing user interfaces, handling server-side logic, managing databases, and deploying applications. I often collaborate with clients to understand their needs, offer technical guidance, and ensure the final product is functional, secure, and user-friendly. This role has helped me grow in both technical ability and project ownership, while learning to adapt quickly to different challenges and workflows."
     }
     
