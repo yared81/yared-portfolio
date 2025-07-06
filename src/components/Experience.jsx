@@ -3,10 +3,28 @@ import { motion } from 'framer-motion'
 const Experience = () => {
   const experiences = [
     {
-      role: "Web Developer",
+      role: "Full Stack Developer",
       company: "BiT Career Development Center",
       period: "2024 - Present",
       description: "Developed, improved, and maintained the website to ensure strong performance and functionality. Regularly fixed bugs and resolved technical issues as they arose. Made continuous improvements to enhance user experience and increase overall site efficiency."
+    },
+    {
+      role: "Backend Engineer",
+      company: "Kuraz technologies",
+      period: "2024 - 2025",
+      description: "I worked as a backend developer at Kuraz technologies. I was responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website."
+    },
+    {
+      role: "Software Engineer",
+      company: "HammerSpacecrafts",
+      period: "2024 - 2025",
+      description: "I work as a full-stack software engineer at Hammerspacecrafts, where I develop and maintain web applications across both frontend and backend. My responsibilities include building and integrating APIs, improving application performance, and collaborating with team members to design and implement new features. I also take part in code reviews, write tests to ensure reliability, and focus on delivering secure, scalable, and user-friendly software."
+    },
+    {
+      role: "Tools & Systems Developer",
+      company: "Startup Garage",
+      period: "2024 - 2025",
+      description: "I support the team by exploring, testing, and implementing digital tools that enhance workflow and operational efficiency. I help evaluate automation solutions, contribute to backend systems, and collaborate with others to improve processes for early-stage startups. This role is helping me build a strong foundation in tech infrastructure and startup operations."
     },
     {
       role: "Backend Developer",
@@ -14,6 +32,7 @@ const Experience = () => {
       period: "2024 - 2025",
       description: "Designed and built scalable backend systems and APIs to support web applications. Resolved server-side issues to maintain high performance and reliability. Worked closely with frontend teams to connect user-facing features with backend logic. Implemented database solutions and followed security best practices to protect data and improve system efficiency."
     }
+    
   ]
 
   return (
