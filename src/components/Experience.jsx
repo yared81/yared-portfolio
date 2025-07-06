@@ -31,6 +31,12 @@ const Experience = () => {
       company: "CodeAlpha",
       period: "2024 - 2025",
       description: "Designed and built scalable backend systems and APIs to support web applications. Resolved server-side issues to maintain high performance and reliability. Worked closely with frontend teams to connect user-facing features with backend logic. Implemented database solutions and followed security best practices to protect data and improve system efficiency."
+    },
+    {
+      role: "Full Stack Developer",
+      company: "Freelance / Self-employed",
+      period: "2023 - 2025",
+      description: "I work with clients to design, build, and maintain complete web applications from frontend to backend. My responsibilities include developing user interfaces, handling server-side logic, managing databases, and deploying applications. I often collaborate with clients to understand their needs, offer technical guidance, and ensure the final product is functional, secure, and user-friendly. This role has helped me grow in both technical ability and project ownership, while learning to adapt quickly to different challenges and workflows."
     }
     
   ]

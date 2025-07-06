@@ -117,8 +117,8 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="py-20 bg-primary">
-      <h2 className="section-title text-center text-light">Some of My Projects</h2>
+    <section id="projects" className="py-20 bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white">
+      <h2 className="section-title text-center">Some of My Projects</h2>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (

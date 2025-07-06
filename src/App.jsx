@@ -26,7 +26,7 @@ function App() {
   }, [theme])
 
   return (
-    <div className="min-h-screen bg-primary transition-colors duration-500">
+    <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors duration-500">
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} theme={theme} setTheme={setTheme} />
       <main className="container mx-auto px-4 py-8">
         <Hero />
