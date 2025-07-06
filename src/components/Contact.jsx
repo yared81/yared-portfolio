@@ -72,7 +72,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20" data-aos="fade-up">
+    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

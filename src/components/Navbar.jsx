@@ -55,15 +55,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      className="fixed w-full z-50 transition-all duration-300"
-      style={{
-        background: 'var(--background)',
-        color: 'var(--text)',
-        boxShadow: isScrolled ? '0 8px 32px 0 rgba(6,182,212,0.10)' : 'none',
-        backdropFilter: isScrolled ? 'blur(12px)' : 'none',
-        borderBottom: isScrolled ? '1px solid rgba(255,255,255,0.10)' : 'none',
-        transition: 'background 0.5s, color 0.5s',
-      }}
+      className="fixed w-full z-50 transition-all duration-300 bg-white/95 text-neutral-900 border-b border-neutral-200 shadow-md dark:bg-neutral-900/95 dark:text-neutral-100 dark:border-neutral-700"
       data-aos="fade-down"
     >
       <div className="container mx-auto px-4">

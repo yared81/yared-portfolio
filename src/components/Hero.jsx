@@ -5,24 +5,19 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
-      style={{
-        background: 'linear-gradient(135deg, var(--primary), var(--secondary), var(--background))',
-        color: 'var(--text)',
-        transition: 'background 0.5s, color 0.5s',
-      }}
+      className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white"
       data-aos="fade-up"
     >
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 z-0" style={{ background: 'rgba(255,255,255,0.7)' }} />
       {/* Animated background blobs */}
       <motion.div
-        className="absolute top-0 left-0 w-[60vw] h-[60vw] rounded-full blur-3xl z-0 animate-pulse"
-        style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.3 }}
+        className="absolute top-0 left-0 w-[60vw] h-[60vw] rounded-full blur-3xl z-0 animate-pulse bg-secondary/10 dark:bg-secondary/20"
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] rounded-full blur-2xl z-0 animate-pulse"
-        style={{ background: 'var(--primary, #6366f1)', opacity: 0.3 }}
+        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] rounded-full blur-2xl z-0 animate-pulse bg-primary/10 dark:bg-primary/20"
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
       />
@@ -58,7 +53,7 @@ const Hero = () => {
             WEB Developer
           </h2>
           <p className="mb-8 text-lg max-w-xl" style={{ color: 'var(--tertiary)' }}>
-            I build exceptional and accessible digital experiences for the web. Currently focused on creating responsive and user-friendly web applications.
+          I create useful and practical software solutions that aim to make everyday tasks easier. I'm passionate about solving problems through technology and enjoy working on projects that have a real impact. Whether it's building websites, applications, or other digital tools, I focus on making sure the end result is clear, reliable, and easy to use.
           </p>
           <div className="flex space-x-6 mb-10">
             <a
