@@ -72,13 +72,13 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
+    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white" data-aos="fade-up">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-16 max-w-3xl mx-auto border border-white/10"
+        className="relative z-10 w-full max-w-3xl mx-auto px-6 py-16 glass shadow-2xl"
       >
         <h2 className="section-title text-center">Get In Touch</h2>
         

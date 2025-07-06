@@ -42,7 +42,7 @@ const Experience = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-16 max-w-3xl mx-auto border border-white/10"
+        className="relative z-10 w-full max-w-5xl mx-auto px-6 py-16 glass shadow-2xl"
       >
         <h2 className="section-title">Experience</h2>
         <div className="space-y-8">

@@ -123,23 +123,15 @@ function About({ theme }) {
             {/* Right Column - About Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold mb-2" style={{ color: 'var(--text)' }}>Web Developer</h3>
+                <h3 className="text-3xl font-bold mb-2" style={{ color: 'var(--text)' }}>Software Engineer</h3>
                 <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
-                  Hello! I'm a passionate Web developer with a keen eye for creating
-                  beautiful and functional web applications. My journey in web development
-                  started with a curiosity about how websites work, which led me to dive
-                  deep into modern web technologies.
+                Hello! I'm a dedicated Software Engineer who enjoys building clean, efficient, and user-friendly software. My journey began with a strong curiosity about how digital tools are made, which pushed me to explore programming and software development deeply.
                 </p>
                 <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
-                  I specialize in building responsive and user-friendly interfaces using
-                  React and modern CSS frameworks. I'm constantly learning and exploring
-                  new technologies to stay at the forefront of web development.
+                I focus on creating reliable and well-structured applications that solve real-world problems. Whether it's a website, desktop tool, or mobile app, I aim to make software that's not just functional but also enjoyable to use.
                 </p>
                 <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
-                  When I'm not coding, you can find me exploring new technologies,  
-                  contributing to open-source projects, or sharing what I've learned  
-                  through technical writing. I also make time to always learn new things—  
-                  as I always say, a good developer is always learning and improving.
+                When I'm not coding, I spend time learning new skills, exploring technologies, or improving my knowledge through reading and practice. I believe that a good developer never stops learning and that mindset keeps me growing every day.
                 </p>
               </div>
             </div>
