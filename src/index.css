@@ -80,6 +80,12 @@ html {
   .glass {
     @apply bg-white/70 dark:bg-neutral-800/80 text-neutral-900 dark:text-neutral-100 shadow-lg backdrop-blur-lg rounded-2xl border border-neutral-200 dark:border-neutral-700;
   }
+  .text-light {
+    color: var(--text-light);
+  }
+  .text-tertiary {
+    color: var(--tertiary);
+  }
   .bg-dark {
     background: var(--glass-dark-bg);
     transition: background 0.5s;

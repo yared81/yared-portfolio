@@ -92,6 +92,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
               </a>
             ))}
             {/* Theme Toggle */}
+            {/**
             <div className="ml-4 flex items-center">
               <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
               <Switch.Root
@@ -106,6 +107,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
               </Switch.Root>
               <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
             </div>
+            */}
           </div>
 
           {/* Mobile Menu Button */}
@@ -136,6 +138,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
                 </a>
               ))}
               {/* Theme Toggle for Mobile */}
+              {/**
               <div className="mt-4 flex items-center justify-center">
                 <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
                 <Switch.Root
@@ -150,6 +153,7 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
                 </Switch.Root>
                 <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
               </div>
+              */}
             </div>
           </div>
         )}

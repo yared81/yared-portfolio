@@ -33,8 +33,7 @@ const Hero = () => {
           <img
             src="/images/Yared_Photo.jpg"
             alt="Yared Mehari"
-            className="rounded-3xl w-72 h-72 md:w-[400px] md:h-[400px] object-cover border-4 shadow-2xl bg-dark/60"
-            style={{ borderColor: 'var(--secondary, #06b6d4)', background: 'var(--glass-bg, rgba(255,255,255,0.10))' }}
+            className="rounded-3xl w-72 h-72 md:w-[400px] md:h-[400px] object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
           />
         </motion.div>
         {/* Text right */}
@@ -45,23 +44,22 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full md:w-1/2 text-left"
         >
-          <p className="mb-4 text-lg font-semibold tracking-widest uppercase" style={{ color: 'var(--secondary)' }}>Hi, my name is</p>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-xl leading-tight" style={{ color: 'var(--text)' }}>
+          <p className="mb-4 text-lg font-semibold tracking-widest uppercase text-cyan-500 dark:text-cyan-400">Hi, my name is</p>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-xl leading-tight text-neutral-900 dark:text-neutral-100">
             Yared Mehari
           </h1>
-          <h2 className="text-2xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: 'var(--tertiary)' }}>
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 tracking-tight text-neutral-700 dark:text-neutral-300">
             Software Engineer
           </h2>
-          <p className="mb-8 text-lg max-w-xl" style={{ color: 'var(--tertiary)' }}>
-          I create useful and practical software solutions that aim to make everyday tasks easier. I'm passionate about solving problems through technology and enjoy working on projects that have a real impact. Whether it's building websites, applications, or other digital tools, I focus on making sure the end result is clear, reliable, and easy to use.
+          <p className="mb-8 text-lg max-w-xl text-neutral-700 dark:text-neutral-300">
+            I create useful and practical software solutions that aim to make everyday tasks easier. I'm passionate about solving problems through technology and enjoy working on projects that have a real impact. Whether it's building websites, applications, or other digital tools, I focus on making sure the end result is clear, reliable, and easy to use.
           </p>
           <div className="flex space-x-6 mb-10">
             <a
               href="https://github.com/yared81"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors text-2xl btn-glow"
-              style={{ color: 'var(--tertiary)' }}
+              className="transition-colors text-2xl btn-glow text-neutral-700 dark:text-neutral-300"
             >
               <FiGithub />
             </a>
@@ -69,8 +67,7 @@ const Hero = () => {
               href="https://linkedin.com/in/yaredazene"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition-colors text-2xl btn-glow"
-              style={{ color: 'var(--tertiary)' }}
+              className="transition-colors text-2xl btn-glow text-neutral-700 dark:text-neutral-300"
             >
               <FiLinkedin />
             </a>

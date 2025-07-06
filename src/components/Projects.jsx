@@ -124,7 +124,7 @@ function Projects() {
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="project-card group bg-dark/70 backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/10 hover:border-secondary/40"
+            className="project-card group bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/10 hover:border-secondary/40"
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(6,182,212,0.25)' }}
@@ -145,7 +145,7 @@ function Projects() {
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light hover:text-secondary transition-colors transform hover:scale-110"
+                    className="text-neutral-900 dark:text-neutral-100 hover:text-secondary transition-colors transform hover:scale-110"
                   >
                     <FiGithub size={24} />
                   </a>
@@ -155,7 +155,7 @@ function Projects() {
                     href={project.live}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-light hover:text-secondary transition-colors transform hover:scale-110"
+                    className="text-neutral-900 dark:text-neutral-100 hover:text-secondary transition-colors transform hover:scale-110"
                   >
                     <FiExternalLink size={24} />
                   </a>
@@ -164,8 +164,8 @@ function Projects() {
             </div>
             
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2 text-light drop-shadow-lg">{project.title}</h3>
-              <p className="text-tertiary mb-4 min-h-[72px]">{project.description}</p>
+              <h3 className="text-xl font-bold mb-2 text-neutral-900 dark:text-neutral-100 drop-shadow-lg">{project.title}</h3>
+              <p className="mb-4 min-h-[72px] text-tertiary dark:text-neutral-300">{project.description}</p>
               <div className="flex flex-wrap gap-2 mt-2">
                 {project.tech.map((tech, techIndex) => (
                   <span

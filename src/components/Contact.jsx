@@ -72,7 +72,7 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white" data-aos="fade-up">
+    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-neutral-900 font-bold dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -98,12 +98,12 @@ const Contact = () => {
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-primary/50 rounded-lg hover:bg-primary/70 transition-colors btn-glow hover-underline"
+                  className="flex items-center space-x-4 p-4 bg-white/80 dark:bg-neutral-900/80 rounded-lg hover:bg-cyan-100 dark:hover:bg-cyan-900 transition-colors btn-glow hover-underline"
                 >
-                  <span className="text-secondary">{info.icon}</span>
+                  <span className="text-cyan-500 dark:text-cyan-400">{info.icon}</span>
                   <div>
-                    <p className="text-light font-medium">{info.label}</p>
-                    <p className="text-tertiary">{info.value}</p>
+                    <p className="text-neutral-900 dark:text-neutral-100 font-medium">{info.label}</p>
+                    <p className="text-neutral-700 dark:text-neutral-300">{info.value}</p>
                   </div>
                 </a>
               ))}
