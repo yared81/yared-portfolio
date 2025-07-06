@@ -31,6 +31,12 @@ const projects = [
     image: "/images/ahadu.png",
     tech: ["HTML", "CSS", "JavaScript","PHP","MySQL", "SQLite"],
     
+  },{
+    title: "Kener Ideas Cloud",
+    description: "Kener Ideas Cloud is an interactive idea board built with React and Supabase. It allows users to submit, explore, and vote on ideas displayed in a dynamic word cloud interface. Each idea node supports nested sub-ideas, like buttons, reply counters, and image previews. The canvas is zoomable and pannable, using React Konva for rich visual interaction. ",
+    image: "/images/kic.png",
+    tech: ["React", "JavaScript", "React Konva", "Supabase","PostgreSQL", "CSS"],    
+    
   },
   {
     title: "LiveScribe Online Editor",
