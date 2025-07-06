@@ -134,7 +134,7 @@ function About({ theme }) {
             {/* Right Column - About Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold mb-2">Software Engineer</h3>
+                <h3 className="text-3xl font-bold mb-2">Software Developer</h3>
                 <p className="text-lg text-neutral-700 dark:text-neutral-300">
                 Hello! I'm a dedicated Software Engineer who enjoys building clean, efficient, and user-friendly software. My journey began with a strong curiosity about how digital tools are made, which pushed me to explore programming and software development deeply.
                 </p>

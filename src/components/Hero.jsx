@@ -49,7 +49,7 @@ const Hero = () => {
             Yared Mehari
           </h1>
           <h2 className="text-2xl md:text-4xl font-bold mb-8 tracking-tight text-neutral-700 dark:text-neutral-300">
-            Software Engineer
+            Software Developer
           </h2>
           <p className="mb-8 text-lg max-w-xl text-neutral-700 dark:text-neutral-300">
             I create useful and practical software solutions that aim to make everyday tasks easier. I'm passionate about solving problems through technology and enjoy working on projects that have a real impact. Whether it's building websites, applications, or other digital tools, I focus on making sure the end result is clear, reliable, and easy to use.
