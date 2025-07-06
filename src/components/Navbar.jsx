@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import { FiMenu, FiX } from 'react-icons/fi'
+import { FiMenu, FiX, FiSun, FiMoon } from 'react-icons/fi'
+import * as Switch from '@radix-ui/react-switch'
+import { motion } from 'framer-motion'
 
-function Navbar({ isMenuOpen, setIsMenuOpen }) {
+function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState('home')
 
@@ -49,9 +51,19 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
   ]
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-primary/80 backdrop-blur-sm shadow-lg' : 'bg-transparent'
-    }`}>
+    <motion.nav
+      initial={{ y: -60, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.7, ease: 'easeOut' }}
+      className={`fixed w-full z-50 transition-all duration-300 ${
+        isScrolled ? 'bg-primary/80 backdrop-blur-lg shadow-2xl border-b border-white/10' : 'bg-transparent'
+      }`}
+      style={{
+        boxShadow: isScrolled ? '0 8px 32px 0 rgba(6,182,212,0.10)' : 'none',
+        backdropFilter: isScrolled ? 'blur(12px)' : 'none',
+      }}
+      data-aos="fade-down"
+    >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a 
@@ -63,12 +75,12 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
-                className={`transition-colors ${
+                className={`relative transition-colors px-2 py-1 ${
                   activeSection === link.href.replace('#', '')
                     ? 'text-secondary font-semibold'
                     : 'text-white hover:text-secondary'
@@ -76,8 +88,30 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
                 onClick={(e) => handleClick(e, link.href)}
               >
                 {link.name}
+                {activeSection === link.href.replace('#', '') && (
+                  <motion.span
+                    layoutId="navbar-underline"
+                    className="absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full"
+                    transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+                  />
+                )}
               </a>
             ))}
+            {/* Theme Toggle */}
+            <div className="ml-4 flex items-center">
+              <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
+              <Switch.Root
+                className="w-10 h-6 bg-gray-300 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary"
+                checked={theme === 'dark'}
+                onCheckedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                id="theme-toggle"
+              >
+                <Switch.Thumb
+                  className={`block w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${theme === 'dark' ? 'translate-x-4' : 'translate-x-1'}`}
+                />
+              </Switch.Root>
+              <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -107,11 +141,26 @@ function Navbar({ isMenuOpen, setIsMenuOpen }) {
                   {link.name}
                 </a>
               ))}
+              {/* Theme Toggle for Mobile */}
+              <div className="mt-4 flex items-center justify-center">
+                <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
+                <Switch.Root
+                  className="w-10 h-6 bg-gray-300 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary"
+                  checked={theme === 'dark'}
+                  onCheckedChange={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+                  id="theme-toggle-mobile"
+                >
+                  <Switch.Thumb
+                    className={`block w-5 h-5 bg-white rounded-full shadow-lg transition-transform duration-300 ${theme === 'dark' ? 'translate-x-4' : 'translate-x-1'}`}
+                  />
+                </Switch.Root>
+                <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
+              </div>
             </div>
           </div>
         )}
       </div>
-    </nav>
+    </motion.nav>
   )
 }
 

@@ -6,16 +6,16 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: "#000000",
-        secondary: "#00ff9d",
-        tertiary: "#a0a0a0",
-        light: "#ffffff",
-        dark: "#1a1a1a",
-        accent: "#ff3366"
-      },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
+        inter: ["Inter", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
+      },
+      colors: {
+        primary: '#6366f1',
+        secondary: '#06b6d4',
+        dark: '#18181b',
+        light: '#f8fafc',
+        tertiary: '#64748b',
       },
     },
   },

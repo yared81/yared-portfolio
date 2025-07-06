@@ -1,6 +1,7 @@
 import { FiMail, FiGithub, FiLinkedin } from 'react-icons/fi'
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
+import { motion } from 'framer-motion'
 
 // Initialize EmailJS
 emailjs.init({
@@ -71,98 +72,106 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20">
-      <h2 className="section-title text-center">Get In Touch</h2>
-      
-      <div className="max-w-4xl mx-auto">
-        <p className="text-tertiary mb-12 text-center">
-          I'm currently open to new opportunities and collaborations.
-          Whether you have a question or just want to say hi, I'll try my best
-          to get back to you!
-        </p>
+    <section id="contact" className="py-20" data-aos="fade-up">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-16 max-w-3xl mx-auto border border-white/10"
+      >
+        <h2 className="section-title text-center">Get In Touch</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Contact Information */}
-          <div className="space-y-6">
-            {contactInfo.map((info, index) => (
-              <a
-                key={index}
-                href={info.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center space-x-4 p-4 bg-primary/50 rounded-lg hover:bg-primary/70 transition-colors"
-              >
-                <span className="text-secondary">{info.icon}</span>
-                <div>
-                  <p className="text-light font-medium">{info.label}</p>
-                  <p className="text-tertiary">{info.value}</p>
-                </div>
-              </a>
-            ))}
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <p className="text-tertiary mb-12 text-center">
+            I'm currently open to new opportunities and collaborations.
+            Whether you have a question or just want to say hi, I'll try my best
+            to get back to you!
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            {/* Contact Information */}
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <a
+                  key={index}
+                  href={info.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center space-x-4 p-4 bg-primary/50 rounded-lg hover:bg-primary/70 transition-colors btn-glow hover-underline"
+                >
+                  <span className="text-secondary">{info.icon}</span>
+                  <div>
+                    <p className="text-light font-medium">{info.label}</p>
+                    <p className="text-tertiary">{info.value}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
 
-          {/* Contact Form */}
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block text-light mb-2">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
-                
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-light mb-2">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
-                required
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="phone" className="block text-light mb-2">Phone</label>
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                value={formData.phone}
-                onChange={handleChange}
-                className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
-              />
-            </div>
-            
-            <div>
-              <label htmlFor="message" className="block text-light mb-2">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                rows="4"
-                className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
-                required
-              ></textarea>
-            </div>
-            
-            <button
-              type="submit"
-              className="btn btn-primary w-full"
-            >
-              Send Message
-            </button>
-          </form>
+            {/* Contact Form */}
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-light mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="email" className="block text-light mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  required
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="phone" className="block text-light mb-2">Phone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                />
+              </div>
+              
+              <div>
+                <label htmlFor="message" className="block text-light mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  rows="4"
+                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  required
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                className="btn btn-primary w-full btn-glow hover-underline"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   )
 }

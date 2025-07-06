@@ -1,16 +1,40 @@
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
+import { SiHtml5, SiCss3, SiJavascript, SiPhp, SiMysql, SiSqlite, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiChartdotjs, SiAmazonaws } from 'react-icons/si'
+import { FaJava, FaTools, FaFileExcel, FaFilePdf } from 'react-icons/fa'
+import { motion } from 'framer-motion'
+
+const techIcons = {
+  HTML: <SiHtml5 className="text-orange-500" />,
+  CSS: <SiCss3 className="text-blue-500" />,
+  JavaScript: <SiJavascript className="text-yellow-400" />,
+  PHP: <SiPhp className="text-indigo-500" />,
+  MySQL: <SiMysql className="text-blue-700" />,
+  SQLite: <SiSqlite className="text-gray-500" />,
+  Java: <FaJava className="text-red-500" />,
+  JavaFX: <FaJava className="text-blue-400" />,
+  Maven: <FaTools className="text-orange-400" />,
+  React: <SiReact className="text-cyan-400" />,
+  'Tailwind CSS': <SiTailwindcss className="text-cyan-500" />,
+  'Node.js': <SiNodedotjs className="text-green-600" />,
+  'Express.js': <SiExpress className="text-gray-700" />,
+  MongoDB: <SiMongodb className="text-green-700" />,
+  'Chart.js': <SiChartdotjs className="text-pink-500" />,
+  'SheetJS (xlsx)': <FaFileExcel className="text-green-600" />,
+  jsPDF: <FaFilePdf className="text-red-600" />,
+  'REST API ': <SiAmazonaws className="text-yellow-500" />,
+}
 
 const projects = [
   {
     title: "Ahadu Amharic Dictionary",
-    description: "it focuses on providing clear Amharic-to-Amharic definitions. It also includes translation features for Amharic to English, Amharic to Ge’ez, and vice versa. The site supports a multilingual interface, allowing users to navigate in different languages. Additional features include Amharic riddles, proverbs, word games, and a smart spell checker that suggests corrections for misspelled Amharic words. The platform is designed to make learning and interacting with the Amharic language both practical and engaging.",
+    description: "it focuses on providing clear Amharic-to-Amharic definitions. It also includes translation features for Amharic to English, Amharic to Ge'ez, and vice versa. The site supports a multilingual interface, allowing users to navigate in different languages. Additional features include Amharic riddles, proverbs, word games, and a smart spell checker that suggests corrections for misspelled Amharic words. The platform is designed to make learning and interacting with the Amharic language both practical and engaging.",
     image: "/images/ahadu.png",
     tech: ["HTML", "CSS", "JavaScript","PHP","MySQL", "SQLite"],
     
   },
   {
     title: "LiveScribe Online Editor",
-    description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It’s designed for quick testing, learning, and building small web projects with an instant visual output.",
+    description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It's designed for quick testing, learning, and building small web projects with an instant visual output.",
     image: "/images/livescribe.png",
     tech: ["HTML", "CSS", "JavaScript"],
  
@@ -92,7 +116,15 @@ function Projects() {
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         {projects.map((project, index) => (
-          <div key={index} className="project-card group bg-dark rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
+          <motion.div
+            key={index}
+            className="project-card group bg-dark/70 backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/10 hover:border-secondary/40"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(6,182,212,0.25)' }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+          >
             <div className="relative overflow-hidden">
               <div className="aspect-w-16 aspect-h-9">
                 <img
@@ -102,40 +134,45 @@ function Projects() {
                 />
               </div>
               <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                <a
-                  href={project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-light hover:text-secondary transition-colors transform hover:scale-110"
-                >
-                  <FiGithub size={24} />
-                </a>
-                <a
-                  href={project.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-light hover:text-secondary transition-colors transform hover:scale-110"
-                >
-                  <FiExternalLink size={24} />
-                </a>
+                {project.github && (
+                  <a
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-light hover:text-secondary transition-colors transform hover:scale-110"
+                  >
+                    <FiGithub size={24} />
+                  </a>
+                )}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-light hover:text-secondary transition-colors transform hover:scale-110"
+                  >
+                    <FiExternalLink size={24} />
+                  </a>
+                )}
               </div>
             </div>
             
             <div className="p-6">
-              <h3 className="text-xl font-bold mb-2 text-light">{project.title}</h3>
-              <p className="text-tertiary mb-4">{project.description}</p>
-              <div className="flex flex-wrap gap-2">
+              <h3 className="text-xl font-bold mb-2 text-light drop-shadow-lg">{project.title}</h3>
+              <p className="text-tertiary mb-4 min-h-[72px]">{project.description}</p>
+              <div className="flex flex-wrap gap-2 mt-2">
                 {project.tech.map((tech, techIndex) => (
                   <span
                     key={techIndex}
-                    className="px-3 py-1 text-sm bg-primary text-secondary rounded-full border border-secondary/20"
+                    className="flex items-center gap-1 px-3 py-1 text-sm bg-primary/80 text-secondary rounded-full border border-secondary/20 shadow-sm backdrop-blur-md"
                   >
+                    {techIcons[tech] || null}
                     {tech}
                   </span>
                 ))}
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

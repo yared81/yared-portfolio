@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion'
+
 const Experience = () => {
   const experiences = [
     {
@@ -15,22 +17,30 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20">
-      <h2 className="section-title">Experience</h2>
-      <div className="space-y-8">
-        {experiences.map((exp, index) => (
-          <div key={index} className="bg-primary/50 p-6 rounded-lg">
-            <div className="flex justify-between items-start mb-4">
-              <div>
-                <h3 className="text-xl font-bold text-light">{exp.role}</h3>
-                <p className="text-secondary">{exp.company}</p>
+    <section id="experience" className="py-20" data-aos="fade-up">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.2 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        className="bg-white/10 backdrop-blur-lg rounded-2xl shadow-2xl p-8 md:p-16 max-w-3xl mx-auto border border-white/10"
+      >
+        <h2 className="section-title">Experience</h2>
+        <div className="space-y-8">
+          {experiences.map((exp, index) => (
+            <div key={index} className="bg-primary/50 p-6 rounded-lg">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-xl font-bold text-light">{exp.role}</h3>
+                  <p className="text-secondary">{exp.company}</p>
+                </div>
+                <span className="text-tertiary">{exp.period}</span>
               </div>
-              <span className="text-tertiary">{exp.period}</span>
+              <p className="text-tertiary">{exp.description}</p>
             </div>
-            <p className="text-tertiary">{exp.description}</p>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
+      </motion.div>
     </section>
   )
 }

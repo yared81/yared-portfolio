@@ -2,14 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  @apply min-h-screen transition-colors duration-500;
+  font-family: 'Inter', 'Poppins', Arial, sans-serif;
+  background: var(--background, #f8fafc);
+  color: var(--text, #18181b);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --background-light: #f8fafc;
+  --background-dark: #18181b;
+  --text-light: #f8fafc;
+  --text-dark: #18181b;
+  --primary: #6366f1;
+  --secondary: #06b6d4;
+  --tertiary: #64748b;
+  --glass-bg: rgba(255,255,255,0.10);
+  --glass-dark-bg: rgba(24,24,27,0.85);
+}
+
+[data-theme='dark'] {
+  --background: var(--background-dark);
+  --text: var(--text-light);
+  --glass-bg: rgba(24,24,27,0.85);
+}
+[data-theme='light'] {
+  --background: var(--background-light);
+  --text: var(--text-dark);
+  --glass-bg: rgba(255,255,255,0.10);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
   
   body {
-    @apply bg-primary text-light min-h-screen;
+    @apply min-h-screen;
     font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    transition: background 0.5s, color 0.5s;
   }
 }
 
@@ -19,7 +56,10 @@
   }
   
   .project-card {
-    @apply bg-dark backdrop-blur-sm rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl;
+    @apply rounded-lg overflow-hidden transition-all duration-300 hover:transform hover:scale-[1.02] hover:shadow-xl;
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.10);
   }
   
   .btn {
@@ -31,6 +71,44 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-bold mb-8 text-light;
+    @apply text-3xl md:text-4xl font-bold mb-8;
+    color: var(--text);
   }
+  .glass {
+    background: var(--glass-bg);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.10);
+    backdrop-filter: blur(12px);
+    border-radius: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.10);
+    transition: background 0.5s;
+  }
+  .bg-dark {
+    background: var(--glass-dark-bg);
+    transition: background 0.5s;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #6366f1 30%, #06b6d4 100%);
+  border-radius: 8px;
+}
+
+body, html {
+  transition: background 0.5s, color 0.5s;
+}
+
+.hover-underline:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 16px 2px #06b6d4, 0 0 4px 1px #6366f1;
+  transform: scale(1.04);
+  transition: box-shadow 0.3s, transform 0.3s;
 } 
