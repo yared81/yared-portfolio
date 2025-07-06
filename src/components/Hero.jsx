@@ -5,17 +5,24 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary via-secondary to-dark transition-colors duration-500"
+      className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, var(--primary), var(--secondary), var(--background))',
+        color: 'var(--text)',
+        transition: 'background 0.5s, color 0.5s',
+      }}
       data-aos="fade-up"
     >
       {/* Animated background blobs */}
       <motion.div
-        className="absolute top-0 left-0 w-[60vw] h-[60vw] bg-secondary/30 rounded-full blur-3xl z-0 animate-pulse"
+        className="absolute top-0 left-0 w-[60vw] h-[60vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.3 }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
       />
       <motion.div
-        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] bg-primary/30 rounded-full blur-2xl z-0 animate-pulse"
+        className="absolute bottom-0 right-0 w-[40vw] h-[40vw] rounded-full blur-2xl z-0 animate-pulse"
+        style={{ background: 'var(--primary, #6366f1)', opacity: 0.3 }}
         animate={{ scale: [1, 1.15, 1] }}
         transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
       />
@@ -31,7 +38,8 @@ const Hero = () => {
           <img
             src="/images/Yared_Photo.jpg"
             alt="Yared Mehari"
-            className="rounded-3xl w-72 h-72 md:w-[400px] md:h-[400px] object-cover border-4 border-secondary shadow-2xl bg-dark/60"
+            className="rounded-3xl w-72 h-72 md:w-[400px] md:h-[400px] object-cover border-4 shadow-2xl bg-dark/60"
+            style={{ borderColor: 'var(--secondary, #06b6d4)', background: 'var(--glass-bg, rgba(255,255,255,0.10))' }}
           />
         </motion.div>
         {/* Text right */}
@@ -42,14 +50,14 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: 'easeOut' }}
           className="w-full md:w-1/2 text-left"
         >
-          <p className="text-secondary mb-4 text-lg font-semibold tracking-widest uppercase">Hi, my name is</p>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 text-light drop-shadow-xl leading-tight">
+          <p className="mb-4 text-lg font-semibold tracking-widest uppercase" style={{ color: 'var(--secondary)' }}>Hi, my name is</p>
+          <h1 className="text-5xl md:text-7xl font-extrabold mb-4 drop-shadow-xl leading-tight" style={{ color: 'var(--text)' }}>
             Yared Mehari
           </h1>
-          <h2 className="text-2xl md:text-4xl font-bold text-tertiary mb-8 tracking-tight">
+          <h2 className="text-2xl md:text-4xl font-bold mb-8 tracking-tight" style={{ color: 'var(--tertiary)' }}>
             WEB Developer
           </h2>
-          <p className="text-tertiary mb-8 text-lg max-w-xl">
+          <p className="mb-8 text-lg max-w-xl" style={{ color: 'var(--tertiary)' }}>
             I build exceptional and accessible digital experiences for the web. Currently focused on creating responsive and user-friendly web applications.
           </p>
           <div className="flex space-x-6 mb-10">
@@ -57,7 +65,8 @@ const Hero = () => {
               href="https://github.com/yared81"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-tertiary hover:text-secondary transition-colors text-2xl btn-glow"
+              className="transition-colors text-2xl btn-glow"
+              style={{ color: 'var(--tertiary)' }}
             >
               <FiGithub />
             </a>
@@ -65,7 +74,8 @@ const Hero = () => {
               href="https://linkedin.com/in/yaredazene"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-tertiary hover:text-secondary transition-colors text-2xl btn-glow"
+              className="transition-colors text-2xl btn-glow"
+              style={{ color: 'var(--tertiary)' }}
             >
               <FiLinkedin />
             </a>
@@ -74,12 +84,14 @@ const Hero = () => {
             <a
               href="#projects"
               className="btn btn-primary inline-block btn-glow hover-underline text-lg px-8 py-3"
+              style={{ background: 'var(--secondary)', color: 'var(--primary)' }}
             >
               View My Work
             </a>
             <a
               href="#contact"
               className="btn btn-primary inline-block btn-glow hover-underline text-lg px-8 py-3"
+              style={{ background: 'var(--secondary)', color: 'var(--primary)' }}
             >
               Contact Me
             </a>

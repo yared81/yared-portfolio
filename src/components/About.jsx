@@ -30,14 +30,21 @@ const skills = [
 
 function SkillsMarquee({ theme }) {
   return (
-    <section className="relative w-full py-10 bg-gradient-to-r from-primary/80 via-dark/90 to-secondary/80 transition-colors duration-500 overflow-hidden">
+    <section className="relative w-full py-10 overflow-hidden"
+      style={{
+        background: 'linear-gradient(90deg, var(--primary), var(--background), var(--secondary))',
+        color: 'var(--text)',
+        transition: 'background 0.5s, color 0.5s',
+      }}
+    >
       <motion.div
-        className="absolute -top-16 left-1/2 -translate-x-1/2 w-[90vw] h-[30vw] bg-secondary/20 rounded-full blur-3xl z-0 animate-pulse"
+        className="absolute -top-16 left-1/2 -translate-x-1/2 w-[90vw] h-[30vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.2 }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 14, ease: 'easeInOut' }}
       />
       <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
-        <h3 className="text-2xl md:text-3xl font-bold text-light mb-6 text-center drop-shadow-lg">Skills & Technologies</h3>
+        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center drop-shadow-lg" style={{ color: 'var(--text)' }}>Skills & Technologies</h3>
         <Marquee
           gradient={true}
           gradientColor={theme === 'dark' ? [24,24,27] : [248,250,252]}
@@ -48,7 +55,7 @@ function SkillsMarquee({ theme }) {
           {skills.map((skill, idx) => (
             <div key={idx} className="flex items-center gap-2 mx-8">
               <span>{skillIcons[skill]}</span>
-              <span className="text-light font-semibold text-lg tracking-wide whitespace-nowrap">{skill}</span>
+              <span className="font-semibold text-lg tracking-wide whitespace-nowrap" style={{ color: 'var(--text)' }}>{skill}</span>
             </div>
           ))}
         </Marquee>
@@ -68,10 +75,18 @@ function About({ theme }) {
   }
 
   return (
-    <section id="about" className="relative w-full py-24 bg-gradient-to-br from-dark via-primary to-secondary transition-colors duration-500 overflow-hidden" data-aos="fade-up">
+    <section id="about" className="relative w-full py-24 overflow-hidden"
+      style={{
+        background: 'linear-gradient(135deg, var(--background), var(--primary), var(--secondary))',
+        color: 'var(--text)',
+        transition: 'background 0.5s, color 0.5s',
+      }}
+      data-aos="fade-up"
+    >
       {/* Animated background blob */}
       <motion.div
-        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] bg-secondary/20 rounded-full blur-3xl z-0 animate-pulse"
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.2 }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
       />
@@ -81,19 +96,22 @@ function About({ theme }) {
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 glass shadow-2xl"
+        style={{ background: 'var(--glass-bg)', color: 'var(--text)' }}
       >
         <div className="w-full">
-          <h2 className="section-title text-center">About Me</h2>
+          <h2 className="section-title text-center" style={{ color: 'var(--text)' }}>About Me</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Column - Stats */}
             <div className="space-y-8">
               {/* Stats Box */}
-              <div className="bg-dark/80 p-8 rounded-2xl shadow-lg border border-white/10">
+              <div className="p-8 rounded-2xl shadow-lg border border-white/10"
+                style={{ background: 'var(--glass-bg)', color: 'var(--text)' }}
+              >
                 <div className="grid grid-cols-2 gap-6">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center p-4">
-                      <div className="text-4xl font-extrabold text-secondary mb-2 drop-shadow-lg">{stat.number}</div>
-                      <div className="text-tertiary text-base font-semibold">{stat.label}</div>
+                      <div className="text-4xl font-extrabold mb-2 drop-shadow-lg" style={{ color: 'var(--secondary)' }}>{stat.number}</div>
+                      <div className="text-base font-semibold" style={{ color: 'var(--tertiary)' }}>{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -102,7 +120,8 @@ function About({ theme }) {
               <div className="flex justify-center">
                 <button
                   onClick={handleDownloadCV}
-                  className="w-full max-w-xs bg-dark hover:bg-secondary/10 text-secondary border border-secondary/20 rounded-lg py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 group btn-glow hover-underline text-lg font-semibold"
+                  className="w-full max-w-xs rounded-lg py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 group btn-glow hover-underline text-lg font-semibold"
+                  style={{ background: 'var(--secondary)', color: 'var(--primary)' }}
                 >
                   <FiDownload className="group-hover:animate-bounce" />
                   <span>Download CV</span>
@@ -112,19 +131,19 @@ function About({ theme }) {
             {/* Right Column - About Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold text-light mb-2">Web Developer</h3>
-                <p className="text-tertiary text-lg">
+                <h3 className="text-3xl font-bold mb-2" style={{ color: 'var(--text)' }}>Web Developer</h3>
+                <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
                   Hello! I'm a passionate Web developer with a keen eye for creating
                   beautiful and functional web applications. My journey in web development
                   started with a curiosity about how websites work, which led me to dive
                   deep into modern web technologies.
                 </p>
-                <p className="text-tertiary text-lg">
+                <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
                   I specialize in building responsive and user-friendly interfaces using
                   React and modern CSS frameworks. I'm constantly learning and exploring
                   new technologies to stay at the forefront of web development.
                 </p>
-                <p className="text-tertiary text-lg">
+                <p className="text-lg" style={{ color: 'var(--tertiary)' }}>
                   When I'm not coding, you can find me exploring new technologies,  
                   contributing to open-source projects, or sharing what I've learned  
                   through technical writing. I also make time to always learn new things—  
