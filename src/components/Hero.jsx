@@ -8,8 +8,8 @@ const Hero = () => {
       className="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white"
       data-aos="fade-up"
     >
-      {/* Overlay for readability */}
-      <div className="absolute inset-0 z-0" style={{ background: 'rgba(255,255,255,0.7)' }} />
+      {/* Theme-aware overlay for readability */}
+      <div className="absolute inset-0 z-0 bg-white/70 dark:bg-neutral-900/70" />
       {/* Animated background blobs */}
       <motion.div
         className="absolute top-0 left-0 w-[60vw] h-[60vw] rounded-full blur-3xl z-0 animate-pulse bg-secondary/10 dark:bg-secondary/20"

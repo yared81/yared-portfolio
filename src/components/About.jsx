@@ -15,25 +15,35 @@ const skillIcons = {
   'Responsive Design': <FaMobileAlt className="text-pink-400 text-2xl" />,
   'REST APIs': <FaJs className="text-green-400 text-2xl" />,
 }
-
 const skills = [
+  "JavaScript",
+  "Python",
+  "Java",
+  "C++",
+  "C#",
+  "SQL",
+
   "HTML",
   "CSS",
-  "JavaScript (ES6+)",
   "React",
   "Node.js",
-  "Tailwind CSS",
+  "REST APIs",
+
   "Git",
+  "Debugging",
+
   "Responsive Design",
-  "REST APIs"
-]
+  "MongoDB",
+  "PostgreSQL",
+  "SQLite"
+];
+
 
 function SkillsMarquee({ theme }) {
   const isLight = theme === 'light';
   return (
-    <section className="relative w-full py-10 overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100"
-    >
-      <div className="absolute inset-0 z-0" style={{ background: isLight ? 'rgba(255,255,255,0.7)' : 'rgba(16,17,26,0.5)' }} />
+    <section className="relative w-full py-10 overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100">
+      <div className="absolute inset-0 z-0 bg-white/70 dark:bg-neutral-900/70" />
       <motion.div
         className="absolute -top-16 left-1/2 -translate-x-1/2 w-[90vw] h-[30vw] rounded-full blur-3xl z-0 animate-pulse"
         style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.2 }}
@@ -74,8 +84,7 @@ function About({ theme }) {
 
   return (
     <section id="about" className="relative w-full py-24 overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
-      <div className="absolute inset-0 z-0" style={{ background: isLight ? 'rgba(255,255,255,0.7)' : 'rgba(16,17,26,0.5)' }} />
-      {/* Animated background blob */}
+      <div className="absolute inset-0 z-0 bg-white/70 dark:bg-neutral-900/70" />
       <motion.div
         className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
         style={{ background: 'var(--secondary, #06b6d4)', opacity: 0.2 }}
