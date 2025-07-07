@@ -45,7 +45,6 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
  
   },
-  
   {
     "title": "Employee Payroll Management System",
     "description": "A comprehensive Java-based payroll management system that automates employee salary processing, attendance tracking, and payslip generation. The system features a modern JavaFX GUI interface, secure user authentication, and robust database integration. It handles complex payroll calculations including tax deductions, generates PDF payslips, and maintains detailed employee and salary records.",
