@@ -140,7 +140,7 @@ function About({ theme }) {
                 </p>
                 <p className="text-lg text-neutral-700 dark:text-neutral-300">
                 I focus on creating reliable and well-structured applications that solve real-world problems. Whether it's a website, desktop tool, or mobile app, I aim to make software that's not just functional but also enjoyable to use.
-                </p>
+                </p> 
                 <p className="text-lg text-neutral-700 dark:text-neutral-300">
                 When I'm not coding, I spend time learning new skills, exploring technologies, or improving my knowledge through reading and practice. I believe that a good developer never stops learning and that mindset keeps me growing every day.
                 </p>
