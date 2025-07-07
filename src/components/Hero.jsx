@@ -33,7 +33,7 @@ const Hero = () => {
           <img
             src="/images/Yared_Photo.jpg"
             alt="Yared Mehari"
-            className="rounded-3xl w-72 h-72 md:w-[400px] md:h-[400px] object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
+            className="rounded-3xl w-82 h-82 md:w-[450px] md:h-[500px] object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
           />
         </motion.div>
         {/* Text right */}

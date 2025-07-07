@@ -109,9 +109,16 @@ function About({ theme }) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Column - Stats */}
             <div className="space-y-8">
+            <div className="flex justify-center mb-2">
+                <img
+                  src="/images/Yared_Photo.jpg"
+                  alt="Yared Mehari"
+                  className="rounded-full w-60 h-60 object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
+                />
+              </div>
               {/* Stats Box */}
-              <div className="p-8 rounded-2xl shadow-lg border border-white/10 bg-white/70 dark:bg-neutral-900/70">
-                <div className="grid grid-cols-2 gap-6">
+              <div className="p-4 rounded-2xl shadow-lg border border-white/10 bg-white/70 dark:bg-neutral-900/70">
+                <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center p-4">
                       <div className="text-4xl font-extrabold mb-2 drop-shadow-lg text-cyan-500 dark:text-cyan-400">{stat.number}</div>
