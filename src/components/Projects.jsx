@@ -94,24 +94,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/yared81/Amazon-clone",
     live: "https://yared81.github.io/Amazon-clone/"
-  },
-  
-  {
-    title: "Tic-Tac-To Game",
-    description: "Tic-Tac-To Game is an interactive version of the classic Tic-Tac-Toe game. It features a clean, responsive design and smooth gameplay, making it fun and easy to play on any device.",
-    image: "/images/tictoctoe.png",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/Tic-Tac-Toe",
-    live: "https://yared81.github.io/Tic-Tac-Toe/"
-  },
-  {
-  title: "Clock",
-    description: "This offers a set of essential timekeeping tools, including a world clock that shows the current time in various cities around the globe. It also features a stopwatch for precise timing and a timer for countdowns. All these functions are integrated into a clean, user-friendly interface for easy access and reliable performance.",
-    image: "/images/clock.png",
-    tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/StopWatch",
-    live: "https://yared81.github.io/StopWatch/"
-  }
+  },    
 ]
 
 

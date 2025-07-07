@@ -36,7 +36,7 @@ const Experience = () => {
       role: "Full Stack Developer",
       company: "Freelance / Self-employed",
       period: "2023 - Present",
-      description: "I work with clients to design, build, and maintain complete web applications from frontend to backend. My responsibilities include developing user interfaces, handling server-side logic, managing databases, and deploying applications. I often collaborate with clients to understand their needs, offer technical guidance, and ensure the final product is functional, secure, and user-friendly. This role has helped me grow in both technical ability and project ownership, while learning to adapt quickly to different challenges and workflows."
+      description: "I work with clients to design, build, and maintain complete web applications from frontend to backend. My responsibilities include developing user interfaces, handling server-side logic, managing databases, and deploying applications. I often collaborate with clients to understand their needs, offer technical guidance, and ensure the final product is functional, secure, and user-friendly."
     }
     
   ]
