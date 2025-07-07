@@ -58,7 +58,7 @@ const projects = [
   {
     title: "Hasset- Personal Budgeting Calculator",
     description: "Hasset Budget App is a modern, user-friendly personal budgeting calculator. It helps you track your income, expenses, budgets, reminders, and savings goals—all in one place. The app features dynamic charts, category budgets, bill reminders, and export options, all wrapped in a clean, responsive design.",
-    image: "/images/Hasset.png",
+    image: "/images/hasset.png",
     tech: ["HTML", "CSS", "JavaScript", "Chart.js", "SheetJS (xlsx)", "jsPDF"],
     github: "https://github.com/yared81/barca-store-et",
     live: "https://yared81.github.io/barca-store-et/"

@@ -31,7 +31,7 @@ const Hero = () => {
           className="flex-shrink-0 flex justify-center md:justify-start w-full md:w-1/2"
         >
           <img
-            src="/images/Yared_Photo.jpg"
+            src="/images/Yared_home.png"
             alt="Yared Mehari"
             className="rounded-3xl w-82 h-82 md:w-[450px] md:h-[500px] object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
           />
