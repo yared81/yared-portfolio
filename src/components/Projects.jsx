@@ -62,7 +62,7 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript", "Chart.js", "SheetJS (xlsx)", "jsPDF"],
     github: "https://github.com/yared81/barca-store-et",
     live: "https://yared81.github.io/barca-store-et/"
-  },
+  }, 
   
   {
     title: "FC Barcelona Store",
