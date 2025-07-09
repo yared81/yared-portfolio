@@ -63,6 +63,7 @@ const projects = [
     github: "https://github.com/yared81/barca-store-et",
     live: "https://yared81.github.io/barca-store-et/"
   }, 
+   
   
   {
     title: "FC Barcelona Store",
