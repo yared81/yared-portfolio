@@ -57,8 +57,7 @@ const projects = [
     tech: ["Java", "JavaFX","MySQL","Maven"],  
     github: "https://github.com/yared81/Employee-Payroll-Management-System",
     
-}
-   
+}   
   ,
   {
     title: "Hasset- Personal Budgeting Calculator",
@@ -76,7 +75,7 @@ const projects = [
     image: "/images/livescribe.png",
     tech: ["HTML", "CSS", "JavaScript"],
  
-  }  
+  },  
   {
     title: "FC Barcelona Store",
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
