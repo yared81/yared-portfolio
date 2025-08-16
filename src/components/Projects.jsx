@@ -31,19 +31,13 @@ const projects = [
     image: "/images/ahadu.png",
     tech: ["HTML", "CSS", "JavaScript","PHP","MySQL", "SQLite"],
     
+    
   },{
     title: "Kener Ideas Cloud",
     description: "Kener Ideas Cloud is an interactive idea board built with React and Supabase. It allows users to submit, explore, and vote on ideas displayed in a dynamic word cloud interface. Each idea node supports nested sub-ideas, like buttons, reply counters, and image previews. The canvas is zoomable and pannable, using React Konva for rich visual interaction. ",
     image: "/images/kic.png",
     tech: ["React", "JavaScript", "React Konva", "Supabase","PostgreSQL", "CSS"],    
     
-  },
-  {
-    title: "LiveScribe Online Editor",
-    description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It's designed for quick testing, learning, and building small web projects with an instant visual output.",
-    image: "/images/livescribe.png",
-    tech: ["HTML", "CSS", "JavaScript"],
- 
   },
   {
   title: "SmartDoc AI - Enterprise Document Intelligence Platform",
@@ -75,7 +69,14 @@ const projects = [
     live: "https://yared81.github.io/barca-store-et/"
   }, 
    
-     
+   ,
+  {
+    title: "LiveScribe Online Editor",
+    description: "LiveScribe Online Editor is a lightweight, modern web-based code editor that lets you write and preview HTML, CSS, and JavaScript in real time. It's designed for quick testing, learning, and building small web projects with an instant visual output.",
+    image: "/images/livescribe.png",
+    tech: ["HTML", "CSS", "JavaScript"],
+ 
+  }  
   {
     title: "FC Barcelona Store",
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
