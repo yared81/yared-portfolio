@@ -47,7 +47,7 @@ const projects = [
 },{
   title: "TruckLink - African Logistics Management Platform",
   description: "TruckLink is a comprehensive logistics management system designed for African markets, connecting drivers and logistics managers through an intuitive platform. Built with React, TypeScript, and Tailwind CSS, it provides real-time job tracking, payment management, maintenance reporting, and analytics dashboards. Features include role-based access control (Driver/Manager), African-themed design with black, yellow, and white color scheme, responsive dashboard layouts, and local storage-based data persistence.",
-  image: "/TruckLink_Logo.png",
+  image: "/images/TruckLink_Logo.png",
   tech: ["React", "TypeScript","Tailwind CSS"]
 },
   {
@@ -64,10 +64,9 @@ const projects = [
     description: "Hasset Budget App is a modern, user-friendly personal budgeting calculator. It helps you track your income, expenses, budgets, reminders, and savings goals—all in one place. The app features dynamic charts, category budgets, bill reminders, and export options, all wrapped in a clean, responsive design.",
     image: "/images/hasset.png",
     tech: ["HTML", "CSS", "JavaScript", "Chart.js", "SheetJS (xlsx)", "jsPDF"],
-    github: "https://github.com/yared81/barca-store-et",
-    live: "https://yared81.github.io/barca-store-et/"
-  }, 
-   
+    github: "https://github.com/yared81/Hasset-budget-app",
+    live: "https://yared81.github.io/Hasset-budget-app/"
+  },    
    ,
   {
     title: "LiveScribe Online Editor",
@@ -81,8 +80,8 @@ const projects = [
     description: "FC Barcelona Store is a simplified clone of the official FC Barcelona store website. It recreates the look and feel of the original site, focusing on core features like product listings, categories, and a clean, responsive design.",
     image: "/images/fcb_store.png",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/yared81/Hasset-budget-app",
-    live: "https://yared81.github.io/Hasset-budget-app/"
+       github: "https://github.com/yared81/barca-store-et",
+    live: "https://yared81.github.io/barca-store-et/"
   },
   {
     title: "Damena-Ethiopian Weather App",
