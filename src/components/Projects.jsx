@@ -43,7 +43,8 @@ const projects = [
   title: "SmartDoc AI - Enterprise Document Intelligence Platform",
   description: "SmartDoc AI is a cutting-edge RAG (Retrieval-Augmented Generation) system that transforms document chaos into actionable intelligence. Built with Streamlit, LangChain, and Groq, it provides instant, accurate answers from any document type including PDFs, Word documents, Excel spreadsheets, and text files. Features include intelligent search & retrieval, lightning-fast processing powered by Groq's inference engine, context-aware AI that maintains conversation memory, and enterprise-grade accuracy with advanced RAG technology.",
   image: "/images/smartdoc-ai.png",
-  tech: ["Python", "Streamlit", "LangChain", "Groq API", "Hugging Face", "ChromaDB", "RAG", "AI/ML", "Vector Embeddings", "Document Processing"]
+  tech: ["Python", "Streamlit", "LangChain", "Groq API", "Hugging Face", "ChromaDB", "RAG"],
+  live: "martdoc-ai.streamlit.app"
 },{
   title: "TruckLink - African Logistics Management Platform",
   description: "TruckLink is a comprehensive logistics management system designed for African markets, connecting drivers and logistics managers through an intuitive platform. Built with React, TypeScript, and Tailwind CSS, it provides real-time job tracking, payment management, maintenance reporting, and analytics dashboards. Features include role-based access control (Driver/Manager), African-themed design with black, yellow, and white color scheme, responsive dashboard layouts, and local storage-based data persistence.",
