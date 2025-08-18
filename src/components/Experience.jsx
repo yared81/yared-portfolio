@@ -12,7 +12,7 @@ const Experience = () => {
       role: "Backend Engineer",
       company: "Kuraz technologies",
       period: "2024 - Present",
-      description: "I worked as a backend developer at Kuraz technologies. I was responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website. I was also responsible for developing and maintaining the backend of the website."
+      description: "Developed and maintained backend systems to ensure performance and reliability. Collaborated with the team to solve project challenges, fixed bugs, and resolved technical issues. Continuously improved features to enhance efficiency and user experience."
     },
     {
       role: "Software Engineer",
