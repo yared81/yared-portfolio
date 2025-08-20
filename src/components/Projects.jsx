@@ -111,69 +111,102 @@ const projects = [
 
 function Projects() {
   return (
-    <section id="projects" className="py-20 bg-white/90 text-black font-bold dark:bg-neutral-900/90 dark:text-white">
-      <h2 className="section-title text-center">Some of My Projects</h2>
+    <section id="projects" className="py-20 font-bold relative w-full overflow-hidden" style={{ background: 'var(--background)', color: 'var(--text)' }}>
+      {/* Animated background blobs */}
+      <motion.div
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary)' }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute -bottom-32 right-1/2 translate-x-1/2 w-[60vw] h-[30vw] rounded-full blur-2xl z-0 animate-pulse"
+        style={{ background: 'var(--primary)' }}
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+      />
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            className="project-card group bg-white/80 dark:bg-neutral-900/80 backdrop-blur-lg rounded-2xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-300 border border-white/10 hover:border-secondary/40"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            whileHover={{ scale: 1.04, boxShadow: '0 8px 32px 0 rgba(6,182,212,0.25)' }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-          >
-            <div className="relative overflow-hidden">
-              <div className="aspect-w-16 aspect-h-9">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-300"
-                />
+      <div className="relative z-10 w-full max-w-[95vw] mx-auto px-4">
+        <h2 className="section-title text-center mb-12">Projects</h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-8 lg:gap-10">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              className="project-card group backdrop-blur-lg rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border hover:border-cyan-400/40 hover:scale-[1.02] min-h-[230px]"
+              style={{ background: 'var(--glass-bg)', borderColor: 'var(--tertiary)' }}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              whileHover={{ y: -5 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.1 }}
+            >
+              <div className="relative overflow-hidden">
+                <div className="aspect-w-16 aspect-h-9">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4">
+                  <div className="flex space-x-4">
+                    {project.github && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-cyan-400 transition-colors transform hover:scale-110 bg-black/50 rounded-full p-2"
+                      >
+                        <FiGithub size={20} />
+                      </a>
+                    )}
+                    {project.live && (
+                      <a
+                        href={project.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white hover:text-cyan-400 transition-colors transform hover:scale-110 bg-black/50 rounded-full p-2"
+                      >
+                        <FiExternalLink size={20} />
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center space-x-4">
-                {project.github && (
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-900 dark:text-neutral-100 hover:text-secondary transition-colors transform hover:scale-110"
-                  >
-                    <FiGithub size={24} />
-                  </a>
-                )}
-                {project.live && (
-                  <a
-                    href={project.live}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-neutral-900 dark:text-neutral-100 hover:text-secondary transition-colors transform hover:scale-110"
-                  >
-                    <FiExternalLink size={24} />
-                  </a>
-                )}
+              
+              <div className="p-4 flex flex-col h-full">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-600 transition-colors text-white">
+                  {project.title}
+                </h3>
+                <p className="text-sm mb-3 flex-grow leading-relaxed text-gray-300">
+                  {project.description}
+                </p>
+                <div className="flex flex-wrap gap-1 mt-auto">
+                  {project.tech.slice(0, 3).map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded-md border"
+                      style={{ 
+                        background: 'var(--glass-bg)', 
+                        color: 'var(--secondary)', 
+                        borderColor: 'var(--secondary)' 
+                      }}
+                    >
+                      {techIcons[tech] || null}
+                      {tech}
+                    </span>
+                  ))}
+                  {project.tech.length > 3 && (
+                    <span className="inline-flex items-center px-2 py-1 text-xs rounded-md" style={{ background: 'var(--glass-bg)', color: 'var(--tertiary)' }}>
+                      +{project.tech.length - 3} more
+                    </span>
+                  )}
+                </div>
               </div>
-            </div>
-            
-            <div className="p-6">
-              <h3 className="text-xl font-bold mb-2 text-neutral-900 dark:text-neutral-100 drop-shadow-lg">{project.title}</h3>
-              <p className="mb-4 min-h-[72px] text-tertiary dark:text-neutral-300">{project.description}</p>
-              <div className="flex flex-wrap gap-2 mt-2">
-                {project.tech.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="flex items-center gap-1 px-3 py-1 text-sm bg-primary/80 text-secondary rounded-full border border-secondary/20 shadow-sm backdrop-blur-md"
-                  >
-                    {techIcons[tech] || null}
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )

@@ -10,9 +10,9 @@ function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [theme, setTheme] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('theme') || 'light'
+      return localStorage.getItem('theme') || 'dark'
     }
-    return 'light'
+    return 'dark'
   })
 
   useEffect(() => {
@@ -27,9 +27,9 @@ function App() {
   }, [theme])
 
   return (
-    <div className="min-h-screen bg-white dark:bg-neutral-900 transition-colors duration-500">
+    <div className="min-h-screen transition-colors duration-500" style={{ background: 'var(--background)', color: 'var(--text)' }}>
       <Navbar isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} theme={theme} setTheme={setTheme} />
-      <main className="container mx-auto px-4 py-8">
+      <main className="container mx-auto px-2 py-4">
         <Hero />
         <About theme={theme} />
         <SkillsMarquee theme={theme} />

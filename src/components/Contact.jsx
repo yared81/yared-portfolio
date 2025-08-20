@@ -72,18 +72,32 @@ const Contact = () => {
   ]
 
   return (
-    <section id="contact" className="py-20 relative w-full overflow-hidden bg-white/90 text-neutral-900 font-bold dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
+    <section id="contact" className="py-20 relative w-full overflow-hidden font-bold" style={{ background: 'var(--background)', color: 'var(--text)' }} data-aos="fade-up">
+      {/* Animated background blobs */}
+      <motion.div
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary)' }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute -bottom-32 right-1/2 translate-x-1/2 w-[60vw] h-[30vw] rounded-full blur-2xl z-0 animate-pulse"
+        style={{ background: 'var(--primary)' }}
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+      />
+      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-3xl mx-auto px-6 py-16 glass shadow-2xl"
+        className="relative z-10 w-full max-w-6xl mx-auto px-4"
       >
-        <h2 className="section-title text-center">Get In Touch</h2>
+        <h2 className="section-title text-center mb-16">Contact Me</h2>
         
         <div className="max-w-4xl mx-auto">
-          <p className="text-tertiary mb-12 text-center">
+          <p className="mb-12 text-center text-gray-300">
             I'm currently open to new opportunities and collaborations.
             Whether you have a question or just want to say hi, I'll try my best
             to get back to you!
@@ -93,71 +107,89 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
-                <a
+                <motion.a
                   key={index}
                   href={info.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-white/80 dark:bg-neutral-900/80 rounded-lg hover:bg-cyan-100 dark:hover:bg-cyan-900 transition-colors btn-glow hover-underline"
+                  className="flex items-center space-x-4 p-4 rounded-lg hover:bg-cyan-100 transition-colors btn-glow hover-underline backdrop-blur-lg shadow-lg border"
+                  style={{ background: 'var(--glass-bg)', borderColor: 'var(--tertiary)' }}
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, amount: 0.2 }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
+                  whileHover={{ y: -3, scale: 1.02 }}
                 >
-                  <span className="text-cyan-500 dark:text-cyan-400">{info.icon}</span>
+                  <span className="text-cyan-500">{info.icon}</span>
                   <div>
-                    <p className="text-neutral-900 dark:text-neutral-100 font-medium">{info.label}</p>
-                    <p className="text-neutral-700 dark:text-neutral-300">{info.value}</p>
+                    <p className="font-medium text-white">{info.label}</p>
+                    <p className="text-gray-300">{info.value}</p>
                   </div>
-                </a>
+                </motion.a>
               ))}
             </div>
 
             {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <motion.form 
+              onSubmit={handleSubmit} 
+              className="space-y-6 p-6 rounded-2xl backdrop-blur-lg shadow-2xl border"
+              style={{ background: 'var(--glass-bg)', borderColor: 'var(--tertiary)' }}
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
+            >
               <div>
-                <label htmlFor="name" className="block text-light mb-2">Name</label>
+                <label htmlFor="name" className="block mb-2 text-white">Name</label>
                 <input
                   type="text"
                   id="name"
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
-                  
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-secondary"
+                  style={{ background: 'var(--glass-bg)', color: 'var(--text)', borderColor: 'var(--tertiary)' }}
+                  required
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-light mb-2">Email</label>
+                <label htmlFor="email" className="block mb-2 text-white">Email</label>
                 <input
                   type="email"
                   id="email"
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-secondary"
+                  style={{ background: 'var(--glass-bg)', color: 'var(--text)', borderColor: 'var(--tertiary)' }}
                   required
                 />
               </div>
               
               <div>
-                <label htmlFor="phone" className="block text-light mb-2">Phone</label>
+                <label htmlFor="phone" className="block mb-2 text-white">Phone</label>
                 <input
                   type="tel"
                   id="phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
-                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-secondary"
+                  style={{ background: 'var(--glass-bg)', color: 'var(--text)', borderColor: 'var(--tertiary)' }}
                 />
               </div>
               
               <div>
-                <label htmlFor="message" className="block text-light mb-2">Message</label>
+                <label htmlFor="message" className="block mb-2 text-white">Message</label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
-                  className="w-full px-4 py-2 bg-primary/50 border border-tertiary/20 rounded-lg text-light focus:outline-none focus:border-secondary"
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-secondary"
+                  style={{ background: 'var(--glass-bg)', color: 'var(--text)', borderColor: 'var(--tertiary)' }}
                   required
                 ></textarea>
               </div>
@@ -165,10 +197,11 @@ const Contact = () => {
               <button
                 type="submit"
                 className="btn btn-primary w-full btn-glow hover-underline"
+                style={{ background: 'var(--secondary)', color: 'white' }}
               >
                 Send Message
               </button>
-            </form>
+            </motion.form>
           </div>
         </div>
       </motion.div>

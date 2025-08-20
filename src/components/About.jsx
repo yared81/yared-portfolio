@@ -51,14 +51,16 @@ const skills = [
 
 function SkillsMarquee({ theme }) {
   return (
-    <section className="relative w-full py-10 overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100">
-      <div className="absolute inset-0 z-0 bg-white/70 dark:bg-neutral-900/70" />
+    <section className="py-16 relative w-full overflow-hidden" style={{ background: 'var(--background)', color: 'var(--text)' }}>
+      <div className="absolute inset-0 z-0" style={{ background: 'var(--background)' }} />
       <motion.div
-        className="absolute -top-16 left-1/2 -translate-x-1/2 w-[90vw] h-[30vw] rounded-full blur-3xl z-0 animate-pulse bg-cyan-400/20 dark:bg-cyan-600/20"
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary)' }}
         animate={{ scale: [1, 1.1, 1] }}
-        transition={{ repeat: Infinity, duration: 14, ease: 'easeInOut' }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
       />
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4">
+      
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-4">
         <h3 className="text-2xl md:text-3xl font-bold mb-6 text-center drop-shadow-lg">Skills & Technologies</h3>
         <Marquee
           gradient={true}
@@ -90,10 +92,11 @@ function About({ theme }) {
   }
 
   return (
-    <section id="about" className="relative w-full py-24 overflow-hidden bg-white/90 text-neutral-900 dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
-      <div className="absolute inset-0 z-0 bg-white/70 dark:bg-neutral-900/70" />
+    <section id="about" className="relative w-full py-24 overflow-hidden" style={{ background: 'var(--background)', color: 'var(--text)' }} data-aos="fade-up">
+      <div className="absolute inset-0 z-0" style={{ background: 'var(--background)' }} />
       <motion.div
-        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse bg-cyan-400/20 dark:bg-cyan-600/20"
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary)' }}
         animate={{ scale: [1, 1.1, 1] }}
         transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
       />
@@ -102,10 +105,11 @@ function About({ theme }) {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-6xl mx-auto px-6 py-16 glass shadow-2xl bg-white/80 dark:bg-neutral-900/80"
+        className="relative z-10 w-full max-w-6xl mx-auto px-4 py-16 glass shadow-2xl"
+        style={{ background: 'var(--glass-bg)' }}
       >
         <div className="w-full">
-          <h2 className="section-title text-center">About Me</h2>
+          <h2 className="section-title text-center mb-16">About Me</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
             {/* Left Column - Stats */}
             <div className="space-y-8">
@@ -113,16 +117,17 @@ function About({ theme }) {
                 <img
                   src="/images/Yared_Photo.jpg"
                   alt="Yared Mehari"
-                  className="rounded-full w-60 h-60 object-cover border-4 shadow-2xl border-cyan-400 bg-white/60 dark:bg-neutral-900/60"
+                  className="rounded-full w-60 h-60 object-cover border-4 shadow-2xl border-cyan-400"
+                  style={{ background: 'var(--background)' }}
                 />
               </div>
               {/* Stats Box */}
-              <div className="p-4 rounded-2xl shadow-lg border border-white/10 bg-white/70 dark:bg-neutral-900/70">
+              <div className="p-4 rounded-2xl shadow-lg border" style={{ background: 'var(--glass-bg)', borderColor: 'var(--tertiary)' }}>
                 <div className="grid grid-cols-2 gap-4">
                   {stats.map((stat, index) => (
                     <div key={index} className="text-center p-4">
-                      <div className="text-4xl font-extrabold mb-2 drop-shadow-lg text-cyan-500 dark:text-cyan-400">{stat.number}</div>
-                      <div className="text-base font-semibold text-neutral-700 dark:text-neutral-300">{stat.label}</div>
+                      <div className="text-4xl font-extrabold mb-2 drop-shadow-lg text-cyan-500">{stat.number}</div>
+                      <div className="text-base font-semibold" style={{ color: 'var(--tertiary)' }}>{stat.label}</div>
                     </div>
                   ))}
                 </div>
@@ -131,7 +136,8 @@ function About({ theme }) {
               <div className="flex justify-center">
                 <button
                   onClick={handleDownloadCV}
-                  className="w-full max-w-xs rounded-lg py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 group btn-glow hover-underline text-lg font-semibold bg-cyan-500 dark:bg-cyan-400 text-white"
+                  className="w-full max-w-xs rounded-lg py-3 px-6 flex items-center justify-center space-x-2 transition-all duration-300 group btn-glow hover-underline text-lg font-semibold text-white"
+                  style={{ background: 'var(--secondary)' }}
                 >
                   <FiDownload className="group-hover:animate-bounce" />
                   <span>Download CV</span>
@@ -141,14 +147,14 @@ function About({ theme }) {
             {/* Right Column - About Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold mb-2">Software Developer</h3>
-                <p className="text-lg text-neutral-700 dark:text-neutral-300">
+                <h3 className="text-3xl font-bold mb-2 text-white">Software Developer</h3>
+                <p className="text-lg text-gray-200">
                 Hello! I'm a dedicated Software Engineer who enjoys building clean, efficient, and user-friendly software. My journey began with a strong curiosity about how digital tools are made, which pushed me to explore programming and software development deeply.
                 </p>
-                <p className="text-lg text-neutral-700 dark:text-neutral-300">
+                <p className="text-lg text-gray-200">
                 I focus on creating reliable and well-structured applications that solve real-world problems. Whether it's a website, desktop tool, or mobile app, I aim to make software that's not just functional but also enjoyable to use.
                 </p> 
-                <p className="text-lg text-neutral-700 dark:text-neutral-300">
+                <p className="text-lg text-gray-200">
                 When I'm not coding, I spend time learning new skills, exploring technologies, or improving my knowledge through reading and practice. I believe that a good developer never stops learning and that mindset keeps me growing every day.
                 </p>
               </div>

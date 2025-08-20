@@ -42,27 +42,50 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 relative w-full overflow-hidden bg-white/90 text-neutral-900 font-bold dark:bg-neutral-900/90 dark:text-neutral-100" data-aos="fade-up">
+    <section id="experience" className="py-20 relative w-full overflow-hidden font-bold" style={{ background: 'var(--background)', color: 'var(--text)' }} data-aos="fade-up">
+      {/* Animated background blobs */}
+      <motion.div
+        className="absolute -top-32 left-1/2 -translate-x-1/2 w-[80vw] h-[40vw] rounded-full blur-3xl z-0 animate-pulse"
+        style={{ background: 'var(--secondary)' }}
+        animate={{ scale: [1, 1.1, 1] }}
+        transition={{ repeat: Infinity, duration: 12, ease: 'easeInOut' }}
+      />
+      <motion.div
+        className="absolute -bottom-32 right-1/2 translate-x-1/2 w-[60vw] h-[30vw] rounded-full blur-2xl z-0 animate-pulse"
+        style={{ background: 'var(--primary)' }}
+        animate={{ scale: [1, 1.15, 1] }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+      />
+      
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.2 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative z-10 w-full max-w-5xl mx-auto px-6 py-16 glass shadow-2xl"
+        className="relative z-10 w-full max-w-6xl mx-auto px-4"
       >
-        <h2 className="section-title">Experience</h2>
+        <h2 className="section-title text-center mb-16">Experience</h2>
         <div className="space-y-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-white/80 dark:bg-neutral-900/80 p-6 rounded-lg">
+            <motion.div
+              key={index}
+              className="p-6 rounded-lg backdrop-blur-lg shadow-lg border"
+              style={{ background: 'var(--glass-bg)', borderColor: 'var(--tertiary)' }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.1 }}
+              whileHover={{ y: -5, scale: 1.02 }}
+            >
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-neutral-900 dark:text-neutral-100">{exp.role}</h3>
-                  <p className="text-cyan-500 dark:text-cyan-400">{exp.company}</p>
+                  <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                  <p className="text-cyan-500">{exp.company}</p>
                 </div>
-                <span className="text-neutral-700 dark:text-neutral-300">{exp.period}</span>
+                <span className="text-gray-300">{exp.period}</span>
               </div>
-              <p className="text-neutral-700 dark:text-neutral-300">{exp.description}</p>
-            </div>
+              <p className="text-gray-300">{exp.description}</p>
+            </motion.div>
           ))}
         </div>
       </motion.div>

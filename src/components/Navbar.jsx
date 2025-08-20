@@ -55,14 +55,20 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
       initial={{ y: -60, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.7, ease: 'easeOut' }}
-      className="fixed w-full z-50 transition-all duration-300 bg-white/95 text-neutral-900 border-b border-neutral-200 shadow-md dark:bg-neutral-900/95 dark:text-neutral-100 dark:border-neutral-700"
+      className="fixed w-full z-50 transition-all duration-300 border-b shadow-2xl backdrop-blur-xl"
+      style={{ 
+        background: 'var(--glass-bg)', 
+        borderColor: 'var(--tertiary)',
+        backdropFilter: 'blur(20px)'
+      }}
       data-aos="fade-down"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           <a 
             href="#home" 
-            className="text-2xl font-bold text-white hover:text-secondary transition-colors"
+            className="text-2xl font-bold hover:text-secondary transition-colors"
+            style={{ color: 'var(--text)' }}
             onClick={(e) => handleClick(e, '#home')}
           >
           Yared Mehari Azene             
@@ -74,26 +80,31 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
               <a
                 key={link.name}
                 href={link.href}
-                className={`relative transition-colors px-2 py-1 ${
+                className={`relative transition-colors px-3 py-2 rounded-lg ${
                   activeSection === link.href.replace('#', '')
-                    ? 'text-secondary font-semibold'
-                    : 'text-white hover:text-secondary'
+                    ? 'font-semibold'
+                    : 'hover:bg-white/10'
                 }`}
+                style={{ 
+                  color: activeSection === link.href.replace('#', '') 
+                    ? 'var(--secondary)' 
+                    : 'var(--text)' 
+                }}
                 onClick={(e) => handleClick(e, link.href)}
               >
                 {link.name}
                 {activeSection === link.href.replace('#', '') && (
                   <motion.span
                     layoutId="navbar-underline"
-                    className="absolute left-0 right-0 -bottom-1 h-0.5 bg-secondary rounded-full"
+                    className="absolute left-0 right-0 -bottom-1 h-0.5 rounded-full"
+                    style={{ background: 'var(--secondary)' }}
                     transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                   />
                 )}
               </a>
             ))}
             {/* Theme Toggle */}
-            {/**
-            <div className="ml-4 flex items-center">
+            <div className="ml-4 flex items-center p-2 rounded-lg hover:bg-white/10 transition-colors">
               <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
               <Switch.Root
                 className="w-10 h-6 bg-gray-300 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -107,12 +118,12 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
               </Switch.Root>
               <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
             </div>
-            */}
           </div>
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white hover:text-secondary transition-colors"
+            className="md:hidden hover:bg-white/10 p-2 rounded-lg transition-colors"
+            style={{ color: 'var(--text)' }}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -121,25 +132,29 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden bg-primary/90 backdrop-blur-sm">
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="md:hidden mt-4 p-4 rounded-2xl backdrop-blur-xl shadow-2xl border border-white/20" style={{ background: 'var(--glass-bg)' }}>
+            <div className="space-y-2">
               {navLinks.map((link) => (
                 <a
                   key={link.name}
                   href={link.href}
-                  className={`block px-3 py-2 transition-colors ${
+                  className={`block px-4 py-3 rounded-lg transition-colors ${
                     activeSection === link.href.replace('#', '')
-                      ? 'text-secondary font-semibold'
-                      : 'text-white hover:text-secondary'
+                      ? 'font-semibold'
+                      : 'hover:bg-white/10'
                   }`}
+                  style={{ 
+                    color: activeSection === link.href.replace('#', '') 
+                      ? 'var(--secondary)' 
+                      : 'var(--text)' 
+                  }}
                   onClick={(e) => handleClick(e, link.href)}
                 >
                   {link.name}
                 </a>
               ))}
               {/* Theme Toggle for Mobile */}
-              {/**
-              <div className="mt-4 flex items-center justify-center">
+              <div className="mt-4 flex items-center justify-center p-3 rounded-lg hover:bg-white/10 transition-colors">
                 <FiSun className={`mr-2 ${theme === 'light' ? 'text-yellow-400' : 'text-gray-400'}`} />
                 <Switch.Root
                   className="w-10 h-6 bg-gray-300 rounded-full relative transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-secondary"
@@ -153,7 +168,6 @@ function Navbar({ isMenuOpen, setIsMenuOpen, theme, setTheme }) {
                 </Switch.Root>
                 <FiMoon className={`ml-2 ${theme === 'dark' ? 'text-blue-400' : 'text-gray-400'}`} />
               </div>
-              */}
             </div>
           </div>
         )}
