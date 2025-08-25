@@ -55,15 +55,15 @@ const Hero = () => {
               <p className="text-lg md:text-xl font-semibold tracking-widest uppercase text-cyan-500">
                 Hi, my name is
               </p>
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-xl leading-tight text-white">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold drop-shadow-xl leading-tight" style={{ color: 'var(--text)' }}>
                 Yared Mehari
               </h1>
-              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tight text-gray-200">
+              <h2 className="text-xl md:text-3xl lg:text-4xl font-bold tracking-tight" style={{ color: 'var(--text)' }}>
                 Software Developer
               </h2>
             </div>
             
-            <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0 text-gray-300 leading-relaxed">
+            <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed" style={{ color: 'var(--text)' }}>
               I create useful and practical software solutions that aim to make everyday tasks easier. I'm passionate about solving problems through technology and enjoy working on projects that have a real impact. Whether it's building websites, applications, or other digital tools, I focus on making sure the end result is clear, reliable, and easy to use.
             </p>
             
@@ -72,7 +72,8 @@ const Hero = () => {
                 href="https://github.com/yared81"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors text-2xl btn-glow text-gray-300 hover:scale-110"
+                className="transition-colors text-2xl btn-glow hover:scale-110"
+                style={{ color: 'var(--text)' }}
               >
                 <FiGithub />
               </a>
@@ -80,7 +81,8 @@ const Hero = () => {
                 href="https://linkedin.com/in/yaredazene"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="transition-colors text-2xl btn-glow text-gray-300 hover:scale-110"
+                className="transition-colors text-2xl btn-glow hover:scale-110"
+                style={{ color: 'var(--text)' }}
               >
                 <FiLinkedin />
               </a>
