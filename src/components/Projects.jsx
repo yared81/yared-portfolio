@@ -176,10 +176,10 @@ function Projects() {
               </div>
               
               <div className="p-4 flex flex-col h-full">
-                <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-600 transition-colors text-white">
+                <h3 className="text-lg font-bold mb-2 group-hover:text-cyan-600 transition-colors" style={{ color: 'var(--text)' }}>
                   {project.title}
                 </h3>
-                <p className="text-sm mb-3 flex-grow leading-relaxed text-gray-300">
+                <p className="text-sm mb-3 flex-grow leading-relaxed" style={{ color: 'var(--text)' }}>
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-1 mt-auto">

@@ -97,7 +97,7 @@ const Contact = () => {
         <h2 className="section-title text-center mb-16">Contact Me</h2>
         
         <div className="max-w-4xl mx-auto">
-          <p className="mb-12 text-center text-gray-300">
+          <p className="mb-12 text-center" style={{ color: 'var(--text)' }}>
             I'm currently open to new opportunities and collaborations.
             Whether you have a question or just want to say hi, I'll try my best
             to get back to you!
@@ -122,8 +122,8 @@ const Contact = () => {
                 >
                   <span className="text-cyan-500">{info.icon}</span>
                   <div>
-                    <p className="font-medium text-white">{info.label}</p>
-                    <p className="text-gray-300">{info.value}</p>
+                    <p className="font-medium" style={{ color: 'var(--text)' }}>{info.label}</p>
+                    <p style={{ color: 'var(--text)' }}>{info.value}</p>
                   </div>
                 </motion.a>
               ))}
@@ -140,7 +140,7 @@ const Contact = () => {
               transition={{ duration: 0.6, ease: 'easeOut', delay: 0.2 }}
             >
               <div>
-                <label htmlFor="name" className="block mb-2 text-white">Name</label>
+                <label htmlFor="name" className="block mb-2" style={{ color: 'var(--text)' }}>Name</label>
                 <input
                   type="text"
                   id="name"
@@ -154,7 +154,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="email" className="block mb-2 text-white">Email</label>
+                <label htmlFor="email" className="block mb-2" style={{ color: 'var(--text)' }}>Email</label>
                 <input
                   type="email"
                   id="email"
@@ -168,7 +168,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="phone" className="block mb-2 text-white">Phone</label>
+                <label htmlFor="phone" className="block mb-2" style={{ color: 'var(--text)' }}>Phone</label>
                 <input
                   type="tel"
                   id="phone"
@@ -181,7 +181,7 @@ const Contact = () => {
               </div>
               
               <div>
-                <label htmlFor="message" className="block mb-2 text-white">Message</label>
+                <label htmlFor="message" className="block mb-2" style={{ color: 'var(--text)' }}>Message</label>
                 <textarea
                   id="message"
                   name="message"

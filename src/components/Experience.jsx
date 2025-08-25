@@ -79,12 +79,12 @@ const Experience = () => {
             >
               <div className="flex justify-between items-start mb-4">
                 <div>
-                  <h3 className="text-xl font-bold text-white">{exp.role}</h3>
+                  <h3 className="text-xl font-bold" style={{ color: 'var(--text)' }}>{exp.role}</h3>
                   <p className="text-cyan-500">{exp.company}</p>
                 </div>
-                <span className="text-gray-300">{exp.period}</span>
+                <span style={{ color: 'var(--text)' }}>{exp.period}</span>
               </div>
-              <p className="text-gray-300">{exp.description}</p>
+              <p style={{ color: 'var(--text)' }}>{exp.description}</p>
             </motion.div>
           ))}
         </div>

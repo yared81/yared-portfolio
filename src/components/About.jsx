@@ -147,14 +147,14 @@ function About({ theme }) {
             {/* Right Column - About Text */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h3 className="text-3xl font-bold mb-2 text-white">Software Developer</h3>
-                <p className="text-lg text-gray-200">
+                <h3 className="text-3xl font-bold mb-2" style={{ color: 'var(--text)' }}>Software Developer</h3>
+                <p className="text-lg" style={{ color: 'var(--text)' }}>
                 Hello! I'm a dedicated Software Engineer who enjoys building clean, efficient, and user-friendly software. My journey began with a strong curiosity about how digital tools are made, which pushed me to explore programming and software development deeply.
                 </p>
-                <p className="text-lg text-gray-200">
+                <p className="text-lg" style={{ color: 'var(--text)' }}>
                 I focus on creating reliable and well-structured applications that solve real-world problems. Whether it's a website, desktop tool, or mobile app, I aim to make software that's not just functional but also enjoyable to use.
                 </p> 
-                <p className="text-lg text-gray-200">
+                <p className="text-lg" style={{ color: 'var(--text)' }}>
                 When I'm not coding, I spend time learning new skills, exploring technologies, or improving my knowledge through reading and practice. I believe that a good developer never stops learning and that mindset keeps me growing every day.
                 </p>
               </div>
