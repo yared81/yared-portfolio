@@ -51,6 +51,13 @@ const projects = [
   image: "/images/TruckLink_Logo.png",
   tech: ["React", "TypeScript","Tailwind CSS"]
 },
+{
+title: "Zemenay - Empowering Ethiopia's Digital Future",
+description: "Built and delivered the official website for Zemenay Tech, Ethiopia's leading technology company. The site highlights their enterprise software, digital transformation, and IT services, featuring a modern responsive design, integrated admin system, client success stories, and multi-language support.",
+image: "/images/zemenay.jpg",
+tech: ["Next.js", "React", "TypeScript", "Tailwind CSS",  "Framer Motion", "Supabase", "JWT Authentication"],
+live: "zemenay-indol.vercel.app/"
+},
   {
     title: "Employee Payroll Management System",
     description: "A comprehensive Java-based payroll management system that automates employee salary processing, attendance tracking, and payslip generation. The system features a modern JavaFX GUI interface, secure user authentication, and robust database integration. It handles complex payroll calculations including tax deductions, generates PDF payslips, and maintains detailed employee and salary records.",
