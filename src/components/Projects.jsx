@@ -56,7 +56,7 @@ title: "Zemenay Tech Official Website",
 description: "Built and delivered the official website for Zemenay Tech, Ethiopia's leading technology company. The site highlights their enterprise software, digital transformation, and IT services, featuring a modern responsive design, integrated admin system, client success stories, and multi-language support.",
 image: "/images/zemenay.jpg",
 tech: ["Next.js", "React", "TypeScript", "Tailwind CSS",  "Framer Motion", "Supabase", "JWT Authentication"],
-live: "zemenay-indol.vercel.app"
+live: "https://zemenay-indol.vercel.app"
 },
   {
     title: "Employee Payroll Management System",
