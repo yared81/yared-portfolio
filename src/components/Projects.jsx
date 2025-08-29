@@ -131,6 +131,10 @@ live: "https://zemenay-indol.vercel.app"
 
 
 function Projects() {
+  // Debug: Log projects data
+  console.log('Projects data:', projects);
+  console.log('First project tech:', projects[0]?.tech);
+  
   return (
     <section id="projects" className="py-20 font-bold relative w-full overflow-hidden" style={{ background: 'var(--background)', color: 'var(--text)' }}>
       {/* Animated background blobs */}
@@ -204,20 +208,21 @@ function Projects() {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((tech, techIndex) => (
+                  {/* Debug: Show tech array length */}
+                  <div className="w-full text-xs text-gray-400 mb-2">
+                    Tech Stack ({project.tech ? project.tech.length : 'undefined'} items): {project.tech ? project.tech.join(', ') : 'No tech stack'}
+                  </div>
+                  {project.tech && Array.isArray(project.tech) ? project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-lg border font-medium transition-all duration-200 hover:scale-105"
-                      style={{ 
-                        background: 'var(--glass-bg)', 
-                        color: 'var(--secondary)', 
-                        borderColor: 'var(--secondary)' 
-                      }}
+                      className="inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-lg border font-medium transition-all duration-200 hover:scale-105 bg-cyan-900/20 border-cyan-500/50 text-cyan-300 hover:bg-cyan-800/30 hover:border-cyan-400"
                     >
                       {techIcons[tech] || null}
                       {tech}
                     </span>
-                  ))}
+                  )) : (
+                    <span className="text-red-400 text-xs">No tech stack defined</span>
+                  )}
                 </div>
               </div>
             </motion.div>
