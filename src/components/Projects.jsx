@@ -21,8 +21,7 @@ const techIcons = {
   'Chart.js': <SiChartdotjs className="text-pink-500" />,
   'SheetJS (xlsx)': <FaFileExcel className="text-green-600" />,
   jsPDF: <FaFilePdf className="text-red-600" />,
-  'REST API ': <SiAmazonaws className="text-yellow-500" />,
-  // New tech icons
+  'REST API ': <SiAmazonaws className="text-yellow-500" />,  
   Python: <SiPython className="text-blue-600" />,
   Streamlit: <SiStreamlit className="text-red-500" />,
   LangChain: <SiLangchain className="text-blue-500" />,
