@@ -1,5 +1,5 @@
 import { FiGithub, FiExternalLink } from 'react-icons/fi'
-import { SiHtml5, SiCss3, SiJavascript, SiPhp, SiMysql, SiSqlite, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiChartdotjs, SiAmazonaws } from 'react-icons/si'
+import { SiHtml5, SiCss3, SiJavascript, SiPhp, SiMysql, SiSqlite, SiReact, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiChartdotjs, SiAmazonaws, SiPython, SiStreamlit, SiLangchain, SiGroq, SiHuggingface, SiChroma, SiTypescript, SiNextdotjs, SiSupabase, SiPostgresql, SiFramer, SiJwt } from 'react-icons/si'
 import { FaJava, FaTools, FaFileExcel, FaFilePdf } from 'react-icons/fa'
 import { motion } from 'framer-motion'
 
@@ -22,6 +22,21 @@ const techIcons = {
   'SheetJS (xlsx)': <FaFileExcel className="text-green-600" />,
   jsPDF: <FaFilePdf className="text-red-600" />,
   'REST API ': <SiAmazonaws className="text-yellow-500" />,
+  // New tech icons
+  Python: <SiPython className="text-blue-600" />,
+  Streamlit: <SiStreamlit className="text-red-500" />,
+  LangChain: <SiLangchain className="text-blue-500" />,
+  'Groq API': <SiGroq className="text-purple-600" />,
+  'Hugging Face': <SiHuggingface className="text-yellow-500" />,
+  ChromaDB: <SiChroma className="text-green-500" />,
+  TypeScript: <SiTypescript className="text-blue-600" />,
+  'Next.js': <SiNextdotjs className="text-black" />,
+  Supabase: <SiSupabase className="text-green-600" />,
+  PostgreSQL: <SiPostgresql className="text-blue-700" />,
+  'Framer Motion': <SiFramer className="text-purple-500" />,
+  'JWT Authentication': <SiJwt className="text-orange-500" />,
+  'React Konva': <SiReact className="text-cyan-400" />,
+  'OpenWeather API': <SiAmazonaws className="text-yellow-500" />,
 }
 
 const projects = [
@@ -43,7 +58,7 @@ const projects = [
   title: "SmartDoc AI - Enterprise Document Intelligence Platform",
   description: "SmartDoc AI is a cutting-edge RAG (Retrieval-Augmented Generation) system that transforms document chaos into actionable intelligence. Built with Streamlit, LangChain, and Groq, it provides instant, accurate answers from any document type including PDFs, Word documents, Excel spreadsheets, and text files. Features include intelligent search & retrieval, lightning-fast processing powered by Groq's inference engine, context-aware AI that maintains conversation memory, and enterprise-grade accuracy with advanced RAG technology.",
   image: "/images/smartdoc-ai.png",
-  tech: ["Python", "Streamlit", "LangChain", "Groq API", "Hugging Face", "ChromaDB", "RAG"],
+  tech: ["Python", "Streamlit", "LangChain", "Groq API", "Hugging Face", "ChromaDB"],
   live: "martdoc-ai.streamlit.app"
 },{
   title: "TruckLink - African Logistics Management Platform",
@@ -189,11 +204,11 @@ function Projects() {
                 <p className="text-sm mb-3 flex-grow leading-relaxed" style={{ color: 'var(--text)' }}>
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-1 mt-auto">
-                  {project.tech.slice(0, 3).map((tech, techIndex) => (
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {project.tech.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="inline-flex items-center gap-1 px-2 py-1 text-xs rounded-md border"
+                      className="inline-flex items-center gap-1 px-3 py-1.5 text-xs rounded-lg border font-medium transition-all duration-200 hover:scale-105"
                       style={{ 
                         background: 'var(--glass-bg)', 
                         color: 'var(--secondary)', 
@@ -204,11 +219,6 @@ function Projects() {
                       {tech}
                     </span>
                   ))}
-                  {project.tech.length > 3 && (
-                    <span className="inline-flex items-center px-2 py-1 text-xs rounded-md" style={{ background: 'var(--glass-bg)', color: 'var(--tertiary)' }}>
-                      +{project.tech.length - 3} more
-                    </span>
-                  )}
                 </div>
               </div>
             </motion.div>
